@@ -6,6 +6,8 @@
 
 namespace Net\Bazzline\Component\DataType;
 
+use Test\Net\Bazzline\Component\DataType\FloatingPointTest;
+
 /**
  * Class DataTypeAbstract
  *
@@ -53,6 +55,46 @@ abstract class DataTypeAbstract
     public function getValue()
     {
         return $this->value;
+    }
+
+    /**
+     * @return Boolean
+     * @author stev leibelt <artodeto@arcor.de>
+     * @since 2013-08-03
+     */
+    public function toBoolean()
+    {
+        return new Boolean($this->value);
+    }
+
+    /**
+     * @return String
+     * @author stev leibelt <artodeto@arcor.de>
+     * @since 2013-08-03
+     */
+    public function toString()
+    {
+        return new String($this->value);
+    }
+
+    /**
+     * @return Numeric
+     * @author stev leibelt <artodeto@arcor.de>
+     * @since 2013-08-03
+     */
+    public function toNumeric()
+    {
+        return new Numeric($this->value);
+    }
+
+    /**
+     * @return FloatingPoint
+     * @author stev leibelt <artodeto@arcor.de>
+     * @since 2013-08-03
+     */
+    public function toFloatingPoint()
+    {
+        return new FloatingPoint($this->value);
     }
 
     /**
