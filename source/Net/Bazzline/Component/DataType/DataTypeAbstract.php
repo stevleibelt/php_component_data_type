@@ -33,7 +33,7 @@ abstract class DataTypeAbstract
         if (is_resource($value)
             || is_object($value)) {
             throw new InvalidArgumentException(
-                'Resource of object given'
+                'resource or object given'
             );
         }
         $this->setValue($value);
@@ -100,6 +100,16 @@ abstract class DataTypeAbstract
     public function toFloatingPoint()
     {
         return new FloatingPoint($this->value);
+    }
+
+    /**
+     * @return Integer
+     * @author stev leibelt <artodeto@arcor.de>
+     * @since 2013-08-03
+     */
+    public function toInteger()
+    {
+        return new Integer($this->value);
     }
 
     /**
