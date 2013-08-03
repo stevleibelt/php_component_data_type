@@ -15,14 +15,24 @@ namespace Net\Bazzline\Component\DataType;
  */
 class Integer extends Numeric
 {
+    /**
+     * @return bool
+     * @author stev leibelt <artodeto@arcor.de>
+     * @since 2013-08-03
+     */
     public function isOdd()
     {
-
+        return !$this->isEven();
     }
 
+    /**
+     * @return bool
+     * @author stev leibelt <artodeto@arcor.de>
+     * @since 2013-08-03
+     */
     public function isEven()
     {
-
+        return (($this->value % 2) == 0);
     }
 
     /**
