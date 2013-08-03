@@ -4,7 +4,7 @@
  * @since 2013-08-03 
  */
 
-namespace Net\Bazzline\Component\DataType;
+namespace Test\Net\Bazzline\Component\DataType;
 
 use PHPUnit_Framework_TestCase;
 
