@@ -18,31 +18,17 @@ use Net\Bazzline\Component\DataType\Boolean;
 class BooleanTest extends TestCase
 {
     /**
-     * @var \Net\Bazzline\Component\DataType\Boolean
-     * @author stev leibelt <artodeto@arcor.de>
-     * @since 2013-08-03
-     */
-    private $type;
-
-    /**
-     * @author stev leibelt <artodeto@arcor.de>
-     * @since 2013-08-03
-     */
-    protected function setUp()
-    {
-        $this->type = new Boolean();
-    }
-
-    /**
      * @author stev leibelt <artodeto@arcor.de>
      * @since 2013-08-03
      */
     public function testNoValueSet()
     {
-        $this->assertFalse($this->type->getValue());
-        $this->assertTrue($this->type->isFalse());
-        $this->assertFalse($this->type->isTrue());
-        $this->assertEquals('', $this->type);
+        $type = $this->createNewType();
+
+        $this->assertFalse($type->getValue());
+        $this->assertTrue($type->isFalse());
+        $this->assertFalse($type->isTrue());
+        $this->assertEquals('', $type);
     }
 
     /**
@@ -118,24 +104,13 @@ class BooleanTest extends TestCase
      */
     public function testSetAndGet($value, $expectedValue, $asString, $isFalse, $isTrue)
     {
-        $this->type->setValue($value);
+        $type = $this->createNewType();
+        $type->setValue($value);
 
-        $this->assertEquals($expectedValue, $this->type->getValue());
-        $this->assertEquals($asString, '' . $this->type);
-        $this->assertEquals($isTrue, $this->type->isTrue());
-        $this->assertEquals($isFalse, $this->type->isFalse());
-    }
-
-    /**
-     * @expectedException \Net\Bazzline\Component\DataType\InvalidArgumentException
-     * @expectedExceptionMessage resource or object given
-     *
-     * @author stev leibelt <artodeto@arcor.de>
-     * @since 2013-08-03
-     */
-    public function setWithObject()
-    {
-        $this->type->setValue(new Boolean());
+        $this->assertEquals($expectedValue, $type->getValue());
+        $this->assertEquals($asString, '' . $type);
+        $this->assertEquals($isTrue, $type->isTrue());
+        $this->assertEquals($isFalse, $type->isFalse());
     }
 
     /**
@@ -151,7 +126,7 @@ class BooleanTest extends TestCase
      */
     public function testConstructor($value, $expectedValue, $asString, $isFalse, $isTrue)
     {
-        $type = new Boolean($value);
+        $type = $this->createNewType($value);
 
         $this->assertEquals($expectedValue, $type->getValue());
         $this->assertEquals($asString, '' . $type);
@@ -165,11 +140,12 @@ class BooleanTest extends TestCase
      */
     public function testSetFalse()
     {
-        $this->type->setFalse();
+        $type = $this->createNewType();
+        $type->setFalse();
 
-        $this->assertFalse($this->type->getValue());
-        $this->assertTrue($this->type->isFalse());
-        $this->assertFalse($this->type->isTrue());
+        $this->assertFalse($type->getValue());
+        $this->assertTrue($type->isFalse());
+        $this->assertFalse($type->isTrue());
     }
 
     /**
@@ -178,10 +154,22 @@ class BooleanTest extends TestCase
      */
     public function testSetTrue()
     {
-        $this->type->setTrue();
+        $type = $this->createNewType();
+        $type->setTrue();
 
-        $this->assertTrue($this->type->getValue());
-        $this->assertFalse($this->type->isFalse());
-        $this->assertTrue($this->type->isTrue());
+        $this->assertTrue($type->getValue());
+        $this->assertFalse($type->isFalse());
+        $this->assertTrue($type->isTrue());
+    }
+
+    /**
+     * @param mixed $value
+     * @return \Net\Bazzline\Component\DataType\Boolean
+     * @author stev leibelt <artodeto@arcor.de>
+     * @since 2013-08-03
+     */
+    private function createNewType($value = null)
+    {
+        return new Boolean($value);
     }
 }
