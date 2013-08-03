@@ -23,6 +23,16 @@ abstract class DataTypeAbstract
     protected $value;
 
     /**
+     * @param null|string|int|float $value
+     * @author stev leibelt <artodeto@arcor.de>
+     * @since 2013-08-03
+     */
+    public function __construct($value = null)
+    {
+        $this->set($value);
+    }
+
+    /**
      * @param mixed $value
      * @return $this
      * @author stev leibelt <artodeto@arcor.de>
