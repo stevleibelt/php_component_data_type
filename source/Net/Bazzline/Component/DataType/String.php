@@ -70,9 +70,9 @@ class String extends DataTypeAbstract
         $this->throwInvalidArgumentExceptionIfValueIsEmptyString($search);
 
         if ($ignoreCase) {
-            return (strpos($this->value, $search) !== false);
-        } else {
             return (stripos($this->value, $search) !== false);
+        } else {
+            return (strpos($this->value, $search) !== false);
         }
     }
 
@@ -88,9 +88,9 @@ class String extends DataTypeAbstract
         $this->throwInvalidArgumentExceptionIfValueIsEmptyString($prefix);
 
         if ($ignoreCase) {
-            return strpos($this->value, $prefix) === 0;
-        } else {
             return stripos($this->value, $prefix) === 0;
+        } else {
+            return strpos($this->value, $prefix) === 0;
         }
     }
 
@@ -104,9 +104,9 @@ class String extends DataTypeAbstract
     public function endsWith($suffix, $ignoreCase = true)
     {
         if ($ignoreCase) {
-            return substr($this->value, 0 - strlen($suffix)) == $suffix;
-        } else {
             return strtolower(substr($this->value, 0 - strlen($suffix))) == strtolower($suffix);
+        } else {
+            return substr($this->value, 0 - strlen($suffix)) == $suffix;
         }
     }
 

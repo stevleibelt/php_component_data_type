@@ -28,6 +28,22 @@ class StringTest extends TestCase
             'null' => array(
                 'value' => null,
                 'length' => 0
+            ),
+            'empty string' => array(
+                'value' => '',
+                'length' => 0
+            ),
+            'char' => array(
+                'value' => 'a',
+                'length' => 1
+            ),
+            '1' => array(
+                'value' => 1,
+                'length' => 1
+            ),
+            'string with numbers' => array(
+                'value' => 'asd 12, 23',
+                'length' => 10
             )
         );
     }
@@ -58,6 +74,26 @@ class StringTest extends TestCase
             'null' => array(
                 'value' => null,
                 'trimmed' => ''
+            ),
+            'empty string' => array(
+                'value' => '',
+                'trimmed' => ''
+            ),
+            'whitespaces at the beginning' => array(
+                'value' => ' foo',
+                'trimmed' => 'foo'
+            ),
+            'whitespaces at the end' => array(
+                'value' => 'foo ',
+                'trimmed' => 'foo'
+            ),
+            'whitespaces at beginning and the end' => array(
+                'value' => ' foo ',
+                'trimmed' => 'foo'
+            ),
+            'whitespaces between two words' => array(
+                'value' => 'hi there',
+                'trimmed' => 'hi there'
             )
         );
     }
@@ -86,12 +122,89 @@ class StringTest extends TestCase
     public static function replaceTestCases()
     {
         return array(
+            'null with null as search and null as replace but with ignore case' => array(
+                'value' => null,
+                'search' => null,
+                'replace' => null,
+                'ignoreCase' => true,
+                'expected' => ''
+            ),
+            'null with null as search and no as replace but with ignore case' => array(
+                'value' => null,
+                'search' => null,
+                'replace' => '',
+                'ignoreCase' => true,
+                'expected' => ''
+            ),
+            'null with no as search and null as replace but with ignore case' => array(
+                'value' => null,
+                'search' => '',
+                'replace' => null,
+                'ignoreCase' => true,
+                'expected' => ''
+            ),
+            'empty string with no as search and null as replace but with ignore case' => array(
+                'value' => '',
+                'search' => null,
+                'replace' => null,
+                'ignoreCase' => true,
+                'expected' => ''
+            ),
             'empty string with no search and no replace but with ignore case' => array(
                 'value' => '',
                 'search' => '',
                 'replace' => '',
                 'ignoreCase' => true,
                 'expected' => ''
+            ),
+            'string with no search and no replace but with ignore case' => array(
+                'value' => 'foo',
+                'search' => '',
+                'replace' => '',
+                'ignoreCase' => true,
+                'expected' => 'foo'
+            ),
+            'string with search and no replace but with ignore case' => array(
+                'value' => 'foo',
+                'search' => 'bar',
+                'replace' => '',
+                'ignoreCase' => true,
+                'expected' => 'foo'
+            ),
+            'string with no search and replace but with ignore case' => array(
+                'value' => 'foo',
+                'search' => '',
+                'replace' => 'bar',
+                'ignoreCase' => true,
+                'expected' => 'foo'
+            ),
+            'string with search and replace but with ignore case' => array(
+                'value' => 'foo',
+                'search' => 'foo',
+                'replace' => 'bar',
+                'ignoreCase' => true,
+                'expected' => 'bar'
+            ),
+            'string with char as search and replace but with ignore case' => array(
+                'value' => 'foo',
+                'search' => 'o',
+                'replace' => 'bar',
+                'ignoreCase' => true,
+                'expected' => 'fbarbar'
+            ),
+            'string with search and char as replace but with ignore case' => array(
+                'value' => 'foo',
+                'search' => 'foo',
+                'replace' => 'a',
+                'ignoreCase' => true,
+                'expected' => 'a'
+            ),
+            'string with search and replace and no ignore case' => array(
+                'value' => 'there is nO foo without a bar',
+                'search' => 'O',
+                'replace' => 'o',
+                'ignoreCase' => false,
+                'expected' => 'there is no foo without a bar'
             )
         );
     }
@@ -160,6 +273,18 @@ class StringTest extends TestCase
                 'value' => '',
                 'search' => 'foo',
                 'ignoreCase' => true,
+                'contains' => false
+            ),
+            'text with searchable text and ignore case' => array(
+                'value' => 'there is no fOo without a bar',
+                'search' => 'foo',
+                'ignoreCase' => true,
+                'contains' => true
+            ),
+            'text with searchable text and no ignore case' => array(
+                'value' => 'there is no fOo without a bar',
+                'search' => 'foo',
+                'ignoreCase' => false,
                 'contains' => false
             )
         );
@@ -239,6 +364,30 @@ class StringTest extends TestCase
                 'search' => 'foo',
                 'ignoreCase' => true,
                 'startsWith' => false
+            ),
+            'text with searchable text and ignore case' => array(
+                'value' => 'there is no foo without a bar',
+                'search' => 'foo',
+                'ignoreCase' => true,
+                'startsWith' => false
+            ),
+            'text with searchable text and no ignore case' => array(
+                'value' => 'there is no foo without a bar',
+                'search' => 'There',
+                'ignoreCase' => false,
+                'startsWith' => false
+            ),
+            'text with fitting searchable text and ignore case' => array(
+                'value' => 'there is no foo without a bar',
+                'search' => 'There',
+                'ignoreCase' => true,
+                'startsWith' => true
+            ),
+            'text with fitting searchable text and no ignore case' => array(
+                'value' => 'there is no foo without a bar',
+                'search' => 'there',
+                'ignoreCase' => true,
+                'startsWith' => true
             )
         );
     }
@@ -268,11 +417,41 @@ class StringTest extends TestCase
     public static function endsWithTestCases()
     {
         return array(
+            'null text with null searchable text and ignore case' => array(
+                'value' => null,
+                'search' => null,
+                'ignoreCase' => true,
+                'endsWith' => true
+            ),
             'empty text with no searchable text and ignore case' => array(
                 'value' => '',
                 'search' => '',
                 'ignoreCase' => true,
                 'endsWith' => true
+            ),
+            'text with no searchable text and ignore case' => array(
+                'value' => 'There is no foo without a bar.',
+                'search' => '',
+                'ignoreCase' => true,
+                'endsWith' => false
+            ),
+            'text with ending whitespace and no searchable text and ignore case' => array(
+                'value' => 'There is no foo without a bar. ',
+                'search' => '',
+                'ignoreCase' => true,
+                'endsWith' => false
+            ),
+            'text with and searchable text and ignore case' => array(
+                'value' => 'There is no foo without a bar.',
+                'search' => 'bar.',
+                'ignoreCase' => true,
+                'endsWith' => true
+            ),
+            'text with and searchable text and no ignore case' => array(
+                'value' => 'There is no foo without a bar.',
+                'search' => 'bAr.',
+                'ignoreCase' => false,
+                'endsWith' => false
             )
         );
     }
@@ -306,6 +485,26 @@ class StringTest extends TestCase
                 'value' => null,
                 'lower' => '',
                 'upper' => ''
+            ),
+            'empty string' => array(
+                'value' => '',
+                'lower' => '',
+                'upper' => ''
+            ),
+            'camel case' => array(
+                'value' => 'thEre Is nO FoO wITHouT A bAr',
+                'lower' => 'there is no foo without a bar',
+                'upper' => 'THERE IS NO FOO WITHOUT A BAR'
+            ),
+            'lower case' => array(
+                'value' => 'there is no foo without a bar',
+                'lower' => 'there is no foo without a bar',
+                'upper' => 'THERE IS NO FOO WITHOUT A BAR'
+            ),
+            'upper case' => array(
+                'value' => 'THERE IS NO FOO WITHOUT A BAR',
+                'lower' => 'there is no foo without a bar',
+                'upper' => 'THERE IS NO FOO WITHOUT A BAR'
             )
         );
     }
