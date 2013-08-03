@@ -50,7 +50,10 @@ abstract class DataTypeAbstract
      * @author stev leibelt <artodeto@arcor.de>
      * @since 2013-08-03
      */
-    abstract public function __toString();
+    public function __toString()
+    {
+        return $this->value;
+    }
 
     /**
      * @param mixed $value
