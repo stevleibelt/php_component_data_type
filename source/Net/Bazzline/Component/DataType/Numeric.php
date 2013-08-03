@@ -160,6 +160,6 @@ class Numeric extends DataTypeAbstract
      */
     protected function castToType($value)
     {
-        return (is_numeric($value)) ? $value : preg_replace( '/[^0-9]\./', '', $value );
+        return (!is_numeric($value)) ? $value : preg_replace( '/[^0-9]\./', '', $value );
     }
 }
