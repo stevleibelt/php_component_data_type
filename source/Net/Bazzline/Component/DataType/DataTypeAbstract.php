@@ -35,7 +35,7 @@ abstract class DataTypeAbstract
     }
 
     /**
-     * @param mixed $value
+     * @param $value
      * @return $this
      * @author stev leibelt <artodeto@arcor.de>
      * @since 2013-08-03

@@ -68,6 +68,91 @@ class Numeric extends DataTypeAbstract
     }
 
     /**
+     * @return bool
+     * @author stev leibelt <artodeto@arcor.de>
+     * @since 2013-08-03
+     */
+    public function isPositive()
+    {
+        return ($this->value > 0);
+    }
+
+    /**
+     * @return bool
+     * @author stev leibelt <artodeto@arcor.de>
+     * @since 2013-08-03
+     */
+    public function isNegative()
+    {
+        return ($this->value < 0);
+    }
+
+    /**
+     * @return bool
+     * @author stev leibelt <artodeto@arcor.de>
+     * @since 2013-08-03
+     */
+    public function isZero()
+    {
+        return ($this->value == 0);
+    }
+
+    /**
+     * @param $number
+     * @return bool
+     * @author stev leibelt <artodeto@arcor.de>
+     * @since 2013-08-03
+     */
+    public function isEqual($number)
+    {
+        return ($this->value == $this->castToType($number));
+    }
+
+    /**
+     * @param $number
+     * @return bool
+     * @author stev leibelt <artodeto@arcor.de>
+     * @since 2013-08-03
+     */
+    public function isGreater($number)
+    {
+        return ($this->value > $this->castToType($number));
+    }
+
+    /**
+     * @param $number
+     * @return bool
+     * @author stev leibelt <artodeto@arcor.de>
+     * @since 2013-08-03
+     */
+    public function isGreaterOrEqual($number)
+    {
+        return ($this->isGreater($number) || $this->isEqual($number));
+    }
+
+    /**
+     * @param $number
+     * @return bool
+     * @author stev leibelt <artodeto@arcor.de>
+     * @since 2013-08-03
+     */
+    public function isLess($number)
+    {
+        return ($this->value < $this->castToType($number));
+    }
+
+    /**
+     * @param $number
+     * @return bool
+     * @author stev leibelt <artodeto@arcor.de>
+     * @since 2013-08-03
+     */
+    public function isLessOrEqual($number)
+    {
+        return ($this->isLess($number) || $this->isEqual($number));
+    }
+
+    /**
      * @param mixed $value
      * @return mixed
      * @author stev leibelt <artodeto@arcor.de>

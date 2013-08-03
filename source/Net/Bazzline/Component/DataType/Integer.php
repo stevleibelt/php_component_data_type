@@ -15,6 +15,16 @@ namespace Net\Bazzline\Component\DataType;
  */
 class Integer extends Numeric
 {
+    public function isOdd()
+    {
+
+    }
+
+    public function isEven()
+    {
+
+    }
+
     /**
      * @return int
      * {@inheritdoc}

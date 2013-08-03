@@ -18,6 +18,28 @@ namespace Net\Bazzline\Component\DataType;
 class String extends DataTypeAbstract
 {
     /**
+     * @return int
+     * @author stev leibelt <artodeto@arcor.de>
+     * @since 2013-08-03
+     */
+    public function getLength()
+    {
+        return strlen($this->value);
+    }
+
+    /**
+     * @return $this
+     * @author stev leibelt <artodeto@arcor.de>
+     * @since 2013-08-03
+     */
+    public function trim()
+    {
+        $this->value = trim($this->value);
+
+        return $this;
+    }
+
+    /**
      * @param string|array $search
      * @param string|array $replace
      * @param bool $ignoreCase
