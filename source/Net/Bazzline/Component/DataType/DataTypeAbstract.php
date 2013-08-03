@@ -6,8 +6,6 @@
 
 namespace Net\Bazzline\Component\DataType;
 
-use Test\Net\Bazzline\Component\DataType\FloatingPointTest;
-
 /**
  * Class DataTypeAbstract
  *
@@ -26,11 +24,18 @@ abstract class DataTypeAbstract
 
     /**
      * @param null|string|int|float $value
+     * @throws InvalidArgumentException
      * @author stev leibelt <artodeto@arcor.de>
      * @since 2013-08-03
      */
     public function __construct($value = null)
     {
+        if (is_resource($value)
+            || is_object($value)) {
+            throw new InvalidArgumentException(
+                'Resource of object given'
+            );
+        }
         $this->setValue($value);
     }
 
