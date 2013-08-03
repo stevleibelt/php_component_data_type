@@ -120,6 +120,12 @@ class NumericTest extends TestCase
                 'positive' => false,
                 'negative' => false,
                 'zero' => true
+            ),
+            '12092,023' => array(
+                'value' => '12092023',
+                'positive' => true,
+                'negative' => false,
+                'zero' => false
             )
         );
     }
