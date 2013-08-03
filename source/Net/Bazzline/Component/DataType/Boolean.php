@@ -1,35 +1,71 @@
 <?php
+/**
+ * @author stev leibelt <artodeto@arcor.de>
+ * @since 2013-08-03
+ */
 
+namespace Net\Bazzline\Component\DataType;
+
+/**
+ * Class Boolean
+ *
+ * @package Net\Bazzline\Component\DataType
+ * @author stev leibelt <artodeto@arcor.de>
+ * @since 2013-08-03
+ */
 class Boolean extends DataTypeAbstract
 {
-    private $value;
-
-    public function __toString()
-    {
-        return (is_null($this->value)) ? null : (($this->value === true) ? true : false);
-    }
-
+    /**
+     * @return bool
+     * @author stev leibelt <artodeto@arcor.de>
+     * @since 2013-08-03
+     */
     public function isTrue()
     {
         return ($this->value === true);
     }
 
+    /**
+     * @return bool
+     * @author stev leibelt <artodeto@arcor.de>
+     * @since 2013-08-03
+     */
     public function isFalse()
     {
         return ($this->value === false);
     }
 
+    /**
+     * @return $this
+     * @author stev leibelt <artodeto@arcor.de>
+     * @since 2013-08-03
+     */
     public function setFalse()
     {
         $this->value = false;
 
-        retrun $this;
+        return $this;
     }
 
+    /**
+     * @return $this
+     * @author stev leibelt <artodeto@arcor.de>
+     * @since 2013-08-03
+     */
     public function setTrue()
     {
         $this->value = true;
 
-        retrun $this;
+        return $this;
+    }
+
+    /**
+     * @param mixed $value
+     * @return bool
+     * {@inheritdoc}
+     */
+    protected function castToType($value)
+    {
+        return (bool) $value;
     }
 }
