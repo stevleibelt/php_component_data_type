@@ -22,7 +22,7 @@ class String extends DataTypeAbstract
      * @author stev leibelt <artodeto@arcor.de>
      * @since 2013-08-03
      */
-    public function getLength()
+    public function length()
     {
         return strlen($this->value);
     }
@@ -67,6 +67,8 @@ class String extends DataTypeAbstract
      */
     public function contains($search, $ignoreCase = true)
     {
+        $this->throwInvalidArgumentExceptionIfValueIsEmptyString($search);
+
         if ($ignoreCase) {
             return (strpos($this->value, $search) !== false);
         } else {
@@ -83,6 +85,8 @@ class String extends DataTypeAbstract
      */
     public function startsWith($prefix, $ignoreCase = true)
     {
+        $this->throwInvalidArgumentExceptionIfValueIsEmptyString($prefix);
+
         if ($ignoreCase) {
             return strpos($this->value, $prefix) === 0;
         } else {
@@ -133,5 +137,20 @@ class String extends DataTypeAbstract
     protected function castToType($value)
     {
         return (string) $value;
+    }
+
+    /**
+     * @param $string
+     * @throws InvalidArgumentException
+     * @author stev leibelt <artodeto@arcor.de>
+     * @since 2013-08-04
+     */
+    private function throwInvalidArgumentExceptionIfValueIsEmptyString($string)
+    {
+        if (strlen($string) == 0) {
+            throw new InvalidArgumentException(
+                'empty string provided'
+            );
+        }
     }
 }
