@@ -7,20 +7,20 @@
 namespace Net\Bazzline\Component\DataType;
 
 /**
- * Class Integer
+ * Class FloatingPoint
  *
  * @package Net\Bazzline\Component\DataType
  * @author stev leibelt <artodeto@arcor.de>
  * @since 2013-08-03
  */
-class Integer extends Numeric
+class FloatingPoint extends Numeric
 {
     /**
-     * @return int
+     * @return float|mixed
      * {@inheritdoc}
      */
     protected function castToType($value)
     {
-        return (int) $value;
+        return (float) $value;
     }
 }
