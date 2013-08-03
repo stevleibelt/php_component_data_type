@@ -12,7 +12,6 @@ namespace Net\Bazzline\Component\DataType;
  * @package Net\Bazzline\Component\DataType
  * @author stev leibelt <artodeto@arcor.de>
  * @since 2013-08-03
- * @todo implement valdation method -> throw exception
  */
 abstract class DataTypeAbstract
 {
