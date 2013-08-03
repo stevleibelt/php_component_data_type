@@ -4,7 +4,7 @@ holds a set of basic data type objects like string, integer and so on to enable 
 
 # Why?
 
-[SplTypes](php.net/manual/en/intro.spl-types.php) are still experimental.
+[SplTypes](http://php.net/manual/en/intro.spl-types.php) are still experimental.
 
 # To Do
 
