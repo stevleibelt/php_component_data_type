@@ -21,7 +21,7 @@ class Numeric extends DataTypeAbstract
      * @author stev leibelt <artodeto@arcor.de>
      * @since 2013-08-03
      */
-    public function add($plus)
+    public function add($plus = 1)
     {
         $this->value += $this->castToType($plus);
 
@@ -34,7 +34,7 @@ class Numeric extends DataTypeAbstract
      * @author stev leibelt <artodeto@arcor.de>
      * @since 2013-08-03
      */
-    public function subtract($minus)
+    public function subtract($minus = 1)
     {
         $this->value -= $this->castToType($minus);
 
@@ -47,7 +47,7 @@ class Numeric extends DataTypeAbstract
      * @author stev leibelt <artodeto@arcor.de>
      * @since 2013-08-03
      */
-    public function multiply($times)
+    public function multiply($times = 1)
     {
         $this->value *= $this->castToType($times);
 
@@ -60,7 +60,7 @@ class Numeric extends DataTypeAbstract
      * @author stev leibelt <artodeto@arcor.de>
      * @since 2013-08-03
      */
-    public function divide($divisor)
+    public function divide($divisor = 1)
     {
         $this->value /= $this->castToType($divisor);
 
