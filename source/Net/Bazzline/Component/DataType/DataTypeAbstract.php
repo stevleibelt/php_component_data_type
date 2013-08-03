@@ -53,7 +53,7 @@ abstract class DataTypeAbstract
      */
     public function __toString()
     {
-        return $this->castToType($this->value);
+        return (string) $this->castToType($this->value);
     }
 
     /**

@@ -42,6 +42,7 @@ class BooleanTest extends TestCase
         $this->assertNull($this->type->get());
         $this->assertFalse($this->type->isFalse());
         $this->assertFalse($this->type->isTrue());
+        $this->assertEquals('', $this->type);
     }
 
     /**
@@ -55,12 +56,56 @@ class BooleanTest extends TestCase
             'null' => array(
                 'value' => null,
                 'expected' => false,
+                'string' => '',
                 'false' => true,
                 'true' => false
+            ),
+            'false' => array(
+                'value' => false,
+                'expected' => false,
+                'string' => '',
+                'false' => true,
+                'true' => false
+            ),
+            'true' => array(
+                'value' => true,
+                'expected' => true,
+                'string' => '1',
+                'false' => false,
+                'true' => true
             ),
             'char' => array(
                 'value' => 'a',
                 'expected' => true,
+                'string' => '1',
+                'false' => false,
+                'true' => true
+            ),
+            'string' => array(
+                'value' => 'string',
+                'expected' => true,
+                'string' => '1',
+                'false' => false,
+                'true' => true
+            ),
+            'int' => array(
+                'value' => 1,
+                'expected' => true,
+                'string' => '1',
+                'false' => false,
+                'true' => true
+            ),
+            'float' => array(
+                'value' => 1.1,
+                'expected' => true,
+                'string' => '1',
+                'false' => false,
+                'true' => true
+            ),
+            'object' => array(
+                'value' => new Boolean(),
+                'expected' => true,
+                'string' => '1',
                 'false' => false,
                 'true' => true
             )
@@ -69,19 +114,48 @@ class BooleanTest extends TestCase
 
     /**
      * @dataProvider testCaseProvider
+     *
      * @param mixed $value
      * @param bool $expectedValue
+     * @param string $asString
      * @param bool $isFalse
      * @param bool $isTrue
      * @author stev leibelt <artodeto@arcor.de>
      * @since 2013-08-03
      */
-    public function testSetAndGet($value, $expectedValue, $isFalse, $isTrue)
+    public function testSetAndGet($value, $expectedValue, $asString, $isFalse, $isTrue)
     {
         $this->type->set($value);
 
         $this->assertEquals($expectedValue, $this->type->get());
+        $this->assertEquals($asString, '' . $this->type);
         $this->assertEquals($isTrue, $this->type->isTrue());
         $this->assertEquals($isFalse, $this->type->isFalse());
+    }
+
+    /**
+     * @author stev leibelt <artodeto@arcor.de>
+     * @since 2013-08-03
+     */
+    public function testSetFalse()
+    {
+        $this->type->setFalse();
+
+        $this->assertFalse($this->type->get());
+        $this->assertTrue($this->type->isFalse());
+        $this->assertFalse($this->type->isTrue());
+    }
+
+    /**
+     * @author stev leibelt <artodeto@arcor.de>
+     * @since 2013-08-03
+     */
+    public function testSetTrue()
+    {
+        $this->type->setTrue();
+
+        $this->assertTrue($this->type->get());
+        $this->assertFalse($this->type->isFalse());
+        $this->assertTrue($this->type->isTrue());
     }
 }
