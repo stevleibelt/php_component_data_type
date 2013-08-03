@@ -40,7 +40,7 @@ class BooleanTest extends TestCase
     public function testNoValueSet()
     {
         $this->assertFalse($this->type->getValue());
-        $this->assertFalse($this->type->isFalse());
+        $this->assertTrue($this->type->isFalse());
         $this->assertFalse($this->type->isTrue());
         $this->assertEquals('', $this->type);
     }
@@ -131,6 +131,27 @@ class BooleanTest extends TestCase
         $this->assertEquals($asString, '' . $this->type);
         $this->assertEquals($isTrue, $this->type->isTrue());
         $this->assertEquals($isFalse, $this->type->isFalse());
+    }
+
+    /**
+     * @dataProvider testCaseProvider
+     *
+     * @param mixed $value
+     * @param bool $expectedValue
+     * @param string $asString
+     * @param bool $isFalse
+     * @param bool $isTrue
+     * @author stev leibelt <artodeto@arcor.de>
+     * @since 2013-08-03
+     */
+    public function testConstructor($value, $expectedValue, $asString, $isFalse, $isTrue)
+    {
+        $type = new Boolean($value);
+
+        $this->assertEquals($expectedValue, $type->getValue());
+        $this->assertEquals($asString, '' . $type);
+        $this->assertEquals($isTrue, $type->isTrue());
+        $this->assertEquals($isFalse, $type->isFalse());
     }
 
     /**
