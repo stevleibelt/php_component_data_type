@@ -29,7 +29,7 @@ abstract class DataTypeAbstract
      */
     public function __construct($value = null)
     {
-        $this->set($value);
+        $this->setValue($value);
     }
 
     /**
@@ -38,7 +38,7 @@ abstract class DataTypeAbstract
      * @author stev leibelt <artodeto@arcor.de>
      * @since 2013-08-03
      */
-    public function set($value)
+    public function setValue($value)
     {
         $this->value = $this->castToType($value);
 
@@ -50,7 +50,7 @@ abstract class DataTypeAbstract
      * @author stev leibelt <artodeto@arcor.de>
      * @since 2013-08-03
      */
-    public function get()
+    public function getValue()
     {
         return $this->value;
     }

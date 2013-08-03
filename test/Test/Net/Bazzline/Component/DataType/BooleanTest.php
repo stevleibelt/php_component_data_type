@@ -39,7 +39,7 @@ class BooleanTest extends TestCase
      */
     public function testNoValueSet()
     {
-        $this->assertNull($this->type->get());
+        $this->assertFalse($this->type->getValue());
         $this->assertFalse($this->type->isFalse());
         $this->assertFalse($this->type->isTrue());
         $this->assertEquals('', $this->type);
@@ -125,9 +125,9 @@ class BooleanTest extends TestCase
      */
     public function testSetAndGet($value, $expectedValue, $asString, $isFalse, $isTrue)
     {
-        $this->type->set($value);
+        $this->type->setValue($value);
 
-        $this->assertEquals($expectedValue, $this->type->get());
+        $this->assertEquals($expectedValue, $this->type->getValue());
         $this->assertEquals($asString, '' . $this->type);
         $this->assertEquals($isTrue, $this->type->isTrue());
         $this->assertEquals($isFalse, $this->type->isFalse());
@@ -141,7 +141,7 @@ class BooleanTest extends TestCase
     {
         $this->type->setFalse();
 
-        $this->assertFalse($this->type->get());
+        $this->assertFalse($this->type->getValue());
         $this->assertTrue($this->type->isFalse());
         $this->assertFalse($this->type->isTrue());
     }
@@ -154,7 +154,7 @@ class BooleanTest extends TestCase
     {
         $this->type->setTrue();
 
-        $this->assertTrue($this->type->get());
+        $this->assertTrue($this->type->getValue());
         $this->assertFalse($this->type->isFalse());
         $this->assertTrue($this->type->isTrue());
     }
