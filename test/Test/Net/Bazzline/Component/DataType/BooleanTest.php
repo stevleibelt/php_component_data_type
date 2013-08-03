@@ -101,13 +101,6 @@ class BooleanTest extends TestCase
                 'string' => '1',
                 'false' => false,
                 'true' => true
-            ),
-            'object' => array(
-                'value' => new Boolean(),
-                'expected' => true,
-                'string' => '1',
-                'false' => false,
-                'true' => true
             )
         );
     }
@@ -131,6 +124,18 @@ class BooleanTest extends TestCase
         $this->assertEquals($asString, '' . $this->type);
         $this->assertEquals($isTrue, $this->type->isTrue());
         $this->assertEquals($isFalse, $this->type->isFalse());
+    }
+
+    /**
+     * @expectedException \Net\Bazzline\Component\DataType\InvalidArgumentException
+     * @expectedExceptionMessage resource or object given
+     *
+     * @author stev leibelt <artodeto@arcor.de>
+     * @since 2013-08-03
+     */
+    public function setWithObject()
+    {
+        $this->type->setValue(new Boolean());
     }
 
     /**
