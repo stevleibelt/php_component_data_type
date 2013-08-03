@@ -17,5 +17,7 @@ abstract class DataTypeAbstract
         return $this->value;
     }
 
-    public abstract function __toString();
+    abstract public function __toString();
+
+    abstract protected function castToType($value);
 }
