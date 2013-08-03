@@ -10,6 +10,8 @@ holds a set of basic data type objects like string, integer and so on to enable 
 
 * Add ArrayAccess to string
 * Add Collection
+* [Option type](https://github.com/schmittjoh/php-option)?
+* [Enum](https://github.com/marc-mabe/php-enum)?
 
 # Links
 * [type juggling](http://php.net/manual/en/language.types.type-juggling.php)
