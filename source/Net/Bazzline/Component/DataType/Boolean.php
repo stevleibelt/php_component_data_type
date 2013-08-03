@@ -60,7 +60,6 @@ class Boolean extends DataTypeAbstract
     }
 
     /**
-     * @param mixed $value
      * @return bool
      * {@inheritdoc}
      */
