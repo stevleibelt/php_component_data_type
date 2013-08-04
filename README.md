@@ -56,6 +56,25 @@ $myClass->addString($myString);
 * Extend provided types with classes in own namespace.
 * If you add a super cool method to your type, push it and be a part of the development team
 
+# Install
+
+## Via Git
+
+```shell
+cd path/to/my/git/respositories
+mkdir -p stevleibelt/php_component_data_type
+cd stevleibelt/php_component_data_type
+```
+
+## Via Componser
+
+
+```shell
+require: "net_bazzline/component_data_type": "dev-master"
+```
+
+git clone git://github.com/stevleibelt/php_component_data_type.git .
+
 # Why?
 
 I started developing this component because of the many casts i have to do while dealing with php's basic data types.
