@@ -42,7 +42,7 @@ class Boolean extends DataTypeAbstract
      */
     public function setFalse()
     {
-        $this->value = false;
+        $this->setValue(false);
 
         return $this;
     }
@@ -54,7 +54,7 @@ class Boolean extends DataTypeAbstract
      */
     public function setTrue()
     {
-        $this->value = true;
+        $this->setValue(true);
 
         return $this;
     }

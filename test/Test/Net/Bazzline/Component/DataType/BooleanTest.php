@@ -23,12 +23,13 @@ class BooleanTest extends TestCase
      */
     public function testNoValueSet()
     {
-        $type = $this->createNewType();
+        $boolean = $this->createNewType();
 
-        $this->assertFalse($type->getValue());
-        $this->assertTrue($type->isFalse());
-        $this->assertFalse($type->isTrue());
-        $this->assertEquals('', $type);
+        $this->assertNull($boolean->getValue(), __LINE__);
+        $this->assertTrue($boolean->isEmpty(), __LINE__);
+        $this->assertFalse($boolean->isFalse(), __LINE__);
+        $this->assertFalse($boolean->isTrue(), __LINE__);
+        $this->assertEquals('', $boolean, __LINE__);
     }
 
     /**
@@ -43,50 +44,57 @@ class BooleanTest extends TestCase
                 'value' => null,
                 'expected' => false,
                 'string' => '',
-                'false' => true,
-                'true' => false
+                'false' => false,
+                'true' => false,
+                'empty' => true
             ),
             'false' => array(
                 'value' => false,
                 'expected' => false,
                 'string' => '',
                 'false' => true,
-                'true' => false
+                'true' => false,
+                'empty' => false
             ),
             'true' => array(
                 'value' => true,
                 'expected' => true,
                 'string' => '1',
                 'false' => false,
-                'true' => true
+                'true' => true,
+                'empty' => false
             ),
             'char' => array(
                 'value' => 'a',
                 'expected' => true,
                 'string' => '1',
                 'false' => false,
-                'true' => true
+                'true' => true,
+                'empty' => false
             ),
             'string' => array(
                 'value' => 'string',
                 'expected' => true,
                 'string' => '1',
                 'false' => false,
-                'true' => true
+                'true' => true,
+                'empty' => false
             ),
             'int' => array(
                 'value' => 1,
                 'expected' => true,
                 'string' => '1',
                 'false' => false,
-                'true' => true
+                'true' => true,
+                'empty' => false
             ),
             'float' => array(
                 'value' => 1.1,
                 'expected' => true,
                 'string' => '1',
                 'false' => false,
-                'true' => true
+                'true' => true,
+                'empty' => false
             )
         );
     }
@@ -99,18 +107,20 @@ class BooleanTest extends TestCase
      * @param string $asString
      * @param bool $isFalse
      * @param bool $isTrue
+     * @param bool $isEmpty
      * @author stev leibelt <artodeto@arcor.de>
      * @since 2013-08-03
      */
-    public function testSetAndGet($value, $expectedValue, $asString, $isFalse, $isTrue)
+    public function testSetAndGet($value, $expectedValue, $asString, $isFalse, $isTrue, $isEmpty)
     {
-        $type = $this->createNewType();
-        $type->setValue($value);
+        $boolean = $this->createNewType();
+        $boolean->setValue($value);
 
-        $this->assertEquals($expectedValue, $type->getValue());
-        $this->assertEquals($asString, '' . $type);
-        $this->assertEquals($isTrue, $type->isTrue());
-        $this->assertEquals($isFalse, $type->isFalse());
+        $this->assertEquals($expectedValue, $boolean->getValue(), __LINE__);
+        $this->assertEquals($asString, '' . $boolean, __LINE__);
+        $this->assertEquals($isTrue, $boolean->isTrue(), __LINE__);
+        $this->assertEquals($isFalse, $boolean->isFalse(), __LINE__);
+        $this->assertEquals($isEmpty, $boolean->isEmpty(), __LINE__);
     }
 
     /**
@@ -126,12 +136,12 @@ class BooleanTest extends TestCase
      */
     public function testConstructor($value, $expectedValue, $asString, $isFalse, $isTrue)
     {
-        $type = $this->createNewType($value);
+        $boolean = $this->createNewType($value);
 
-        $this->assertEquals($expectedValue, $type->getValue());
-        $this->assertEquals($asString, '' . $type);
-        $this->assertEquals($isTrue, $type->isTrue());
-        $this->assertEquals($isFalse, $type->isFalse());
+        $this->assertEquals($expectedValue, $boolean->getValue());
+        $this->assertEquals($asString, '' . $boolean);
+        $this->assertEquals($isTrue, $boolean->isTrue());
+        $this->assertEquals($isFalse, $boolean->isFalse());
     }
 
     /**
@@ -140,12 +150,13 @@ class BooleanTest extends TestCase
      */
     public function testSetFalse()
     {
-        $type = $this->createNewType();
-        $type->setFalse();
+        $boolean = $this->createNewType();
+        $boolean->setFalse();
 
-        $this->assertFalse($type->getValue());
-        $this->assertTrue($type->isFalse());
-        $this->assertFalse($type->isTrue());
+        $this->assertFalse($boolean->getValue(), __LINE__);
+        $this->assertTrue($boolean->isFalse(), __LINE__);
+        $this->assertFalse($boolean->isTrue(), __LINE__);
+        $this->assertFalse($boolean->isEmpty(), __LINE__);
     }
 
     /**
@@ -154,12 +165,13 @@ class BooleanTest extends TestCase
      */
     public function testSetTrue()
     {
-        $type = $this->createNewType();
-        $type->setTrue();
+        $boolean = $this->createNewType();
+        $boolean->setTrue();
 
-        $this->assertTrue($type->getValue());
-        $this->assertFalse($type->isFalse());
-        $this->assertTrue($type->isTrue());
+        $this->assertTrue($boolean->getValue(), __LINE__);
+        $this->assertFalse($boolean->isFalse(), __LINE__);
+        $this->assertTrue($boolean->isTrue(), __LINE__);
+        $this->assertFalse($boolean->isEmpty(), __LINE__);
     }
 
     /**

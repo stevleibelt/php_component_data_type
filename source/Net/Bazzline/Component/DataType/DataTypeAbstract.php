@@ -16,6 +16,13 @@ namespace Net\Bazzline\Component\DataType;
 abstract class DataTypeAbstract
 {
     /**
+     * @var bool
+     * @author stev leibelt <artodeto@arcor.de>
+     * @since 2013-08-04
+     */
+    protected $isEmpty;
+
+    /**
      * @var mixed
      * @author stev leibelt <artodeto@arcor.de>
      * @since 2013-08-03
@@ -47,7 +54,12 @@ abstract class DataTypeAbstract
      */
     public function setValue($value)
     {
-        $this->value = $this->castToType($value);
+        if ($value !== null) {
+            $this->value = $this->castToType($value);
+            $this->isEmpty = false;
+        } else {
+            $this->isEmpty = true;
+        }
 
         return $this;
     }
@@ -60,6 +72,16 @@ abstract class DataTypeAbstract
     public function getValue()
     {
         return $this->value;
+    }
+
+    /**
+     * @return bool
+     * @author stev leibelt <artodeto@arcor.de>
+     * @since 2013-08-04
+     */
+    public function isEmpty()
+    {
+        return $this->isEmpty;
     }
 
     /**
