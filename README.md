@@ -9,7 +9,12 @@ This component includes class definitions for php basic data types like:
 
 By using this component, you are able to use type hints also for basic data types.
 
-The data types are shipped with some simple but useful methods.
+# Features
+
+* Enables type hints for basic php types
+* Types shipped with useful methods
+* Are comparable with native php types by using "=="
+* Provides generic type casting by implemented "toString()" methods (and so on)
 
 # Usage
 
@@ -98,6 +103,7 @@ Following are links i found and used for creating this component.
 * [type casing](http://www.phpro.org/tutorials/PHP-Type-Casting.html#4.7)
 * [machine data type](http://en.wikipedia.org/wiki/Data_type#Machine_data_types)
 * [list of php resource types](http://php.net/manual/en/resource.php)
+* [php_component_data_type at ohloh.net](https://www.ohloh.net/p/php_component_data_type)
 
 ## Other Implementations
 
