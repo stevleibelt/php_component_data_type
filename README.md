@@ -15,41 +15,41 @@ The data types are shipped with some simple but useful methods.
 
 ## Example
 
-    ```php
+```php
+/**
+ * Class with type hint for string
+ *
+ * @author stev leibelt <artodeto@arcor.de>
+ * @since 2013-08-04
+ */
+class MyClass
+{
     /**
-     * Class with type hint for string
+     * @var array
+     * @author stev leibelt <artodeto@arcor.de>
+     * @since 2013-08-04
+     */
+    private $strings = array();
+
+    /**
+     * Super cool method with type hint for string
      *
      * @author stev leibelt <artodeto@arcor.de>
      * @since 2013-08-04
      */
-    class MyClass
+    public function addString(\Net\Bazzline\Component\DataType\String $string)
     {
-        /**
-         * @var array
-         * @author stev leibelt <artodeto@arcor.de>
-         * @since 2013-08-04
-         */
-        private $strings = array();
+        $this->strings[] = $string;
 
-        /**
-         * Super cool method with type hint for string
-         *
-         * @author stev leibelt <artodeto@arcor.de>
-         * @since 2013-08-04
-         */
-        public function addString(\Net\Bazzline\Component\DataType\String $string)
-        {
-            $this->strings[] = $string;
-
-            return $this;
-        }
+        return $this;
     }
+}
 
-    $myString = new \Net\Bazzline\Component\DataType\String('super cool test string');
+$myString = new \Net\Bazzline\Component\DataType\String('super cool test string');
 
-    $myClass = new MyClass();
-    $myClass->addString($myString);
-    ```
+$myClass = new MyClass();
+$myClass->addString($myString);
+```
 
 ## Hints
 
