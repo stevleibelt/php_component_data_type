@@ -73,7 +73,7 @@ cd stevleibelt/php_component_data_type
 git clone git://github.com/stevleibelt/php_component_data_type.git .
 ```
 
-## Via Componser
+## Via Composer
 
 ```shell
 require: "net_bazzline/component_data_type": "dev-master"
