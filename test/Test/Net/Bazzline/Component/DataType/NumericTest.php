@@ -212,6 +212,19 @@ class NumericTest extends TestCase
     }
 
     /**
+     * @author stev leibelt <artodeto@arcor.de>
+     * @since 2013-08-04
+     */
+    public function testWorkWithNativeType()
+    {
+        $numeric = $this->createNewType(12.33);
+        $value = 0.01;
+        $sum = "$numeric" + $value; //you have to cast it to string since php has no magic __toInteger method we can overwrite
+
+        $this->assertEquals(12.34, $sum);
+    }
+
+    /**
      * @param mixed $value
      * @return Numeric
      * @author stev leibelt <artodeto@arcor.de>

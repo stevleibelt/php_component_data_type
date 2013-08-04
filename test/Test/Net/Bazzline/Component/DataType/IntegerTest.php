@@ -94,6 +94,19 @@ class IntegerTest extends TestCase
     }
 
     /**
+     * @author stev leibelt <artodeto@arcor.de>
+     * @since 2013-08-04
+     */
+    public function testWorkWithNativeType()
+    {
+        $integer = $this->createNewType(1);
+        $value = 2;
+        $sum = "$integer" + $value; //you have to cast it to string since php has no magic __toInteger method we can overwrite
+
+        $this->assertEquals(3, $sum);
+    }
+
+    /**
      * @param mixed $value
      * @return \Net\Bazzline\Component\DataType\Integer
      * @author stev leibelt <artodeto@arcor.de>

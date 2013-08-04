@@ -540,6 +540,19 @@ class StringTest extends TestCase
     }
 
     /**
+     * @author stev leibelt <artodeto@arcor.de>
+     * @since 2013-08-04
+     */
+    public function testWorkWithNativeType()
+    {
+        $string = $this->createNewType('There is no foo without a ');
+        $value = 'bar';
+        $concatenation = $string . $value;
+
+        $this->assertEquals('There is no foo without a bar', $concatenation);
+    }
+
+    /**
      * @param mixed $value
      * @return \Net\Bazzline\Component\DataType\String
      * @author stev leibelt <artodeto@arcor.de>

@@ -188,6 +188,21 @@ class BooleanTest extends TestCase
     }
 
     /**
+     * @author stev leibelt <artodeto@arcor.de>
+     * @since 2013-08-04
+     */
+    public function testWorkWithNativeType()
+    {
+        $boolean = $this->createNewType(false);
+        $value = true;
+        $or = "$boolean" || $value; //you have to cast it to string since php has no magic __toInteger method we can overwrite
+        $and = "$boolean" && $value; //you have to cast it to string since php has no magic __toInteger method we can overwrite
+
+        $this->assertTrue($or);
+        $this->assertFalse($and);
+    }
+
+    /**
      * @param mixed $value
      * @return \Net\Bazzline\Component\DataType\Boolean
      * @author stev leibelt <artodeto@arcor.de>
