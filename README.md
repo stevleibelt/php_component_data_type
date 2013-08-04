@@ -94,6 +94,7 @@ Last but not least [SplTypes](http://php.net/manual/en/intro.spl-types.php) are 
 * Add arrayAccess to string
 * Add collection
 * Add examples
+* Add benchmarks
 * [Option type](https://github.com/schmittjoh/php-option)?
 * [Enum](https://github.com/marc-mabe/php-enum)?
 * Add [invoke](http://www.php.net/manual/en/language.oop5.magic.php#object.invoke) to String?
