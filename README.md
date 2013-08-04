@@ -64,16 +64,15 @@ $myClass->addString($myString);
 cd path/to/my/git/respositories
 mkdir -p stevleibelt/php_component_data_type
 cd stevleibelt/php_component_data_type
+
+git clone git://github.com/stevleibelt/php_component_data_type.git .
 ```
 
 ## Via Componser
 
-
 ```shell
 require: "net_bazzline/component_data_type": "dev-master"
 ```
-
-git clone git://github.com/stevleibelt/php_component_data_type.git .
 
 # Why?
 
