@@ -76,6 +76,19 @@ class FloatingPointTest extends TestCase
     }
 
     /**
+     * @author stev leibelt <artodeto@arcor.de>
+     * @since 2013-08-04
+     */
+    public function testEqualValue()
+    {
+        $floatingPointOne = $this->createNewType(1.2932);
+        $floatingPointTwo = $this->createNewType(1.2932);
+
+        $this->assertTrue(($floatingPointOne == $floatingPointTwo));
+        $this->assertFalse(($floatingPointOne === $floatingPointTwo));
+    }
+
+    /**
      * @param mixed $value
      * @return \Net\Bazzline\Component\DataType\FloatingPoint
      * @author stev leibelt <artodeto@arcor.de>

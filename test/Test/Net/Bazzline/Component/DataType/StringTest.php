@@ -527,6 +527,19 @@ class StringTest extends TestCase
     }
 
     /**
+     * @author stev leibelt <artodeto@arcor.de>
+     * @since 2013-08-04
+     */
+    public function testEqualValue()
+    {
+        $stringOne = $this->createNewType('string with whitespaces and number from 1 to 9.');
+        $stringTwo = $this->createNewType('string with whitespaces and number from 1 to 9.');
+
+        $this->assertTrue(($stringOne == $stringTwo));
+        $this->assertFalse(($stringOne === $stringTwo));
+    }
+
+    /**
      * @param mixed $value
      * @return \Net\Bazzline\Component\DataType\String
      * @author stev leibelt <artodeto@arcor.de>

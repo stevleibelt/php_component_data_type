@@ -199,6 +199,19 @@ class NumericTest extends TestCase
     }
 
     /**
+     * @author stev leibelt <artodeto@arcor.de>
+     * @since 2013-08-04
+     */
+    public function testEqualValue()
+    {
+        $numericOne = $this->createNewType(2932.1212);
+        $numericTwo = $this->createNewType(2932.1212);
+
+        $this->assertTrue(($numericOne == $numericTwo));
+        $this->assertFalse(($numericOne === $numericTwo));
+    }
+
+    /**
      * @param mixed $value
      * @return Numeric
      * @author stev leibelt <artodeto@arcor.de>

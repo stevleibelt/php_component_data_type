@@ -163,6 +163,19 @@ class BooleanTest extends TestCase
     }
 
     /**
+     * @author stev leibelt <artodeto@arcor.de>
+     * @since 2013-08-04
+     */
+    public function testEqualValue()
+    {
+        $booleanOne = $this->createNewType(true);
+        $booleanTwo = $this->createNewType(true);
+
+        $this->assertTrue(($booleanOne == $booleanTwo));
+        $this->assertFalse(($booleanOne === $booleanTwo));
+    }
+
+    /**
      * @param mixed $value
      * @return \Net\Bazzline\Component\DataType\Boolean
      * @author stev leibelt <artodeto@arcor.de>

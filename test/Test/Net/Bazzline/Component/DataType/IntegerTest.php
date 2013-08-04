@@ -81,6 +81,19 @@ class IntegerTest extends TestCase
     }
 
     /**
+     * @author stev leibelt <artodeto@arcor.de>
+     * @since 2013-08-04
+     */
+    public function testEqualValue()
+    {
+        $integerOne = $this->createNewType(2932);
+        $integerTwo = $this->createNewType(2932);
+
+        $this->assertTrue(($integerOne == $integerTwo));
+        $this->assertFalse(($integerOne === $integerTwo));
+    }
+
+    /**
      * @param mixed $value
      * @return \Net\Bazzline\Component\DataType\Integer
      * @author stev leibelt <artodeto@arcor.de>
