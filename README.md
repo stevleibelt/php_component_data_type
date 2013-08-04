@@ -15,6 +15,7 @@ The data types are shipped with some simple but useful methods.
 
 ## Example
 
+    ```php
     /**
      * Class with type hint for string
      *
@@ -48,6 +49,7 @@ The data types are shipped with some simple but useful methods.
 
     $myClass = new MyClass();
     $myClass->addString($myString);
+    ```
 
 ## Hints
 
