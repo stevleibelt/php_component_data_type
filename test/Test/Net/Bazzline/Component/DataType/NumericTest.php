@@ -208,6 +208,8 @@ class NumericTest extends TestCase
         $numericTwo = $this->createNewType(2932.1212);
 
         $this->assertTrue(($numericOne == $numericTwo));
+        $this->assertTrue($numericOne->isEqual($numericTwo));
+        $this->assertTrue($numericTwo->isEqual($numericOne));
         $this->assertFalse(($numericOne === $numericTwo));
     }
 
