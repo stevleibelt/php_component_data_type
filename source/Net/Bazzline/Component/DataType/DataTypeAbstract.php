@@ -6,6 +6,9 @@
 
 namespace Net\Bazzline\Component\DataType;
 
+use Net\Bazzline\Component\Lock\LockInterface;
+use Net\Bazzline\Component\Lock\RuntimeLock;
+
 /**
  * Class DataTypeAbstract
  *
@@ -13,7 +16,7 @@ namespace Net\Bazzline\Component\DataType;
  * @author stev leibelt <artodeto@arcor.de>
  * @since 2013-08-03
  */
-abstract class DataTypeAbstract
+abstract class DataTypeAbstract implements LockInterface
 {
     /**
      * @var bool
@@ -21,6 +24,13 @@ abstract class DataTypeAbstract
      * @since 2013-08-04
      */
     protected $isEmpty;
+
+    /**
+     * @var \Net\Bazzline\Component\Lock\RuntimeLock
+     * @author stev leibelt <artodeto@arcor.de>
+     * @since 2013-08-05
+     */
+    protected $lock;
 
     /**
      * @var mixed
@@ -44,16 +54,23 @@ abstract class DataTypeAbstract
             );
         }
         $this->setValue($value);
+        $this->lock = new RuntimeLock();
     }
 
     /**
      * @param $value
      * @return $this
+     * @throws RuntimeException
      * @author stev leibelt <artodeto@arcor.de>
      * @since 2013-08-03
      */
     public function setValue($value)
     {
+        if ($this->lock->isLocked()) {
+            throw new RuntimeException(
+
+            );
+        }
         if ($value !== null) {
             $this->value = $this->castToType($value);
             $this->isEmpty = false;
@@ -142,6 +159,66 @@ abstract class DataTypeAbstract
     public function __toString()
     {
         return (string) $this->castToType($this->value);
+    }
+
+    /**
+     * Validates if lock is acquired
+     *
+     * @return boolean
+     * @author stev leibelt <artodeto@arcor.de>
+     * @since 2013-01-03
+     */
+    public function isLocked()
+    {
+        return $this->lock->isLocked();
+    }
+
+    /**
+     * Acquires lock
+     *
+     * @throws \RuntimeException
+     * @author stev leibelt <artodeto@arcor.de>
+     * @since 2013-01-03
+     */
+    public function acquire()
+    {
+        $this->lock->acquire();
+    }
+
+    /**
+     * Release lock
+     *
+     * @throws \RuntimeException
+     * @author stev leibelt <artodeto@arcor.de>
+     * @since 2013-01-03
+     */
+    public function release()
+    {
+        $this->lock->release();
+    }
+
+    /**
+     * Returns name or default
+     *
+     * @return string
+     * @author stev leibelt <artodeto@arcor.de>
+     * @since 2013-01-03
+     */
+    public function getName()
+    {
+        return $this->lock->getName();
+    }
+
+    /**
+     * Sets name
+     *
+     * @param string $name - name of the lock
+     * @author stev leibelt <artodeto@arcor.de>
+     * @since 2013-01-03
+     */
+    public function setName($name)
+    {
+        $this->lock->setName($name);
     }
 
     /**
