@@ -13,7 +13,7 @@ namespace Net\Bazzline\Component\DataType;
  * @author stev leibelt <artodeto@arcor.de>
  * @since 2013-08-03
  */
-class FloatingPoint extends Numeric
+class FloatingPoint extends Numeric implements FloatingPointableInterface
 {
     /**
      * @return float|mixed
