@@ -112,3 +112,19 @@ Following are links i found and used for creating this component.
 ## Other Implementations
 
 * [h4kuna/data-type](https://github.com/h4kuna/data-type)
+
+# History
+
+* next
+    * Coverd existing classes with "ableInterface" where each defines a *from$Type* and *to$Type* method
+    * Started class for array called DataArray
+    * Implemented usage of LockInterface, now you can lock a datatype to prevent from value changes
+* [1.1.0](https://github.com/stevleibelt/php_component_data_type/tree/1.1.0)
+    * Updated readme
+    * Implemented *isEmpty* method which leads to different behaviour while creating an object
+* [1.0.0](https://github.com/stevleibelt/php_component_data_type/tree/1.0.0)
+    * Finished data type Boolean
+    * Finished data type FloatingPoint
+    * Finished data type Numierc
+    * Finished data type Integer
+    * Finished data type String 
