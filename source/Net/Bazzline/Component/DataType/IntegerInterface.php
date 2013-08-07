@@ -1,46 +1,31 @@
 <?php
 /**
  * @author stev leibelt <artodeto@arcor.de>
- * @since 2013-08-03 
+ * @since 2013-08-07 
  */
 
 namespace Net\Bazzline\Component\DataType;
 
 /**
- * Class Integer
+ * Class IntegerInterface
  *
  * @package Net\Bazzline\Component\DataType
  * @author stev leibelt <artodeto@arcor.de>
- * @since 2013-08-03
+ * @since 2013-08-07
  */
-class Integer extends Numeric implements IntegerInterface
+interface IntegerInterface extends NumericInterface
 {
     /**
      * @return bool
      * @author stev leibelt <artodeto@arcor.de>
      * @since 2013-08-03
      */
-    public function isOdd()
-    {
-        return !$this->isEven();
-    }
+    public function isOdd();
 
     /**
      * @return bool
      * @author stev leibelt <artodeto@arcor.de>
      * @since 2013-08-03
      */
-    public function isEven()
-    {
-        return (($this->value % 2) == 0);
-    }
-
-    /**
-     * @return int
-     * {@inheritdoc}
-     */
-    protected function castToType($value)
-    {
-        return (int) $value;
-    }
+    public function isEven();
 }
