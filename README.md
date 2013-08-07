@@ -91,7 +91,7 @@ Last but not least [SplTypes](http://php.net/manual/en/intro.spl-types.php) are 
 
 * Add modulo to Numeric
 * Add locking (mark a value as read only)
-* Add Date type
+* Add Date type -> check [Joda Time](http://joda-time.sourceforge.net/)
 * Add Time type
 * Add DateTime type
 * Add arrayAccess to string
