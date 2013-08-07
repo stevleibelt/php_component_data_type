@@ -17,7 +17,7 @@ use Iterator;
  * @author stev leibelt <artodeto@arcor.de>
  * @since 2013-08-07
  */
-interface DataArrayInterface extends ArrayableInterface, ArrayAccess, Countable, Iterator
+interface DataArrayInterface extends ArrayableInterface, ArrayAccess, Countable, Iterator, DataTypeInterface
 {
 
 }

@@ -16,7 +16,7 @@ namespace Net\Bazzline\Component\DataType;
 interface NumericableInterface
 {
     /**
-     * @param numeric $numeric
+     * @param numeric|Numeric $numeric
      * @return $this
      * @author stev leibelt <artodeto@arcor.de>
      * @since 2013-08-07
@@ -24,7 +24,7 @@ interface NumericableInterface
     public function fromNumeric($numeric);
 
     /**
-     * @return numeric
+     * @return Numeric
      * @author stev leibelt <artodeto@arcor.de>
      * @since 2013-08-07
      */

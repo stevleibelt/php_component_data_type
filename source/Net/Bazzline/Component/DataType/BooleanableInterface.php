@@ -16,7 +16,7 @@ namespace Net\Bazzline\Component\DataType;
 interface BooleanableInterface
 {
     /**
-     * @param boolean $boolean
+     * @param boolean|Boolean $boolean
      * @return $this
      * @author stev leibelt <artodeto@arcor.de>
      * @since 2013-08-07
@@ -24,7 +24,7 @@ interface BooleanableInterface
     public function fromBoolean($boolean);
 
     /**
-     * @return boolean
+     * @return Boolean
      * @author stev leibelt <artodeto@arcor.de>
      * @since 2013-08-07
      */

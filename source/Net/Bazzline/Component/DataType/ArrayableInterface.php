@@ -16,15 +16,15 @@ namespace Net\Bazzline\Component\DataType;
 interface ArrayableInterface
 {
     /**
-     * @param array $array
+     * @param array|DataArray $array
      * @return $this
      * @author stev leibelt <artodeto@arcor.de>
      * @since 2013-08-07
      */
-    public function fromArray(array $array);
+    public function fromArray($array);
 
     /**
-     * @return array
+     * @return DataArray
      * @author stev leibelt <artodeto@arcor.de>
      * @since 2013-08-07
      */

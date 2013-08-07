@@ -16,7 +16,7 @@ namespace Net\Bazzline\Component\DataType;
 interface IntegerableInterface
 {
     /**
-     * @param int $integer
+     * @param int|Integer $integer
      * @return $this
      * @author stev leibelt <artodeto@arcor.de>
      * @since 2013-08-07
@@ -24,7 +24,7 @@ interface IntegerableInterface
     public function fromInteger($integer);
 
     /**
-     * @return int
+     * @return Integer
      * @author stev leibelt <artodeto@arcor.de>
      * @since 2013-08-07
      */

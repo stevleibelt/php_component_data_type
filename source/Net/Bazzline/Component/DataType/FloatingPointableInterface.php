@@ -16,7 +16,7 @@ namespace Net\Bazzline\Component\DataType;
 interface FloatingPointableInterface
 {
     /**
-     * @param float $floatingPoint
+     * @param float|FloatingPoint $floatingPoint
      * @return $this
      * @author stev leibelt <artodeto@arcor.de>
      * @since 2013-08-07
@@ -24,7 +24,7 @@ interface FloatingPointableInterface
     public function fromFloatingPoint($floatingPoint);
 
     /**
-     * @return float
+     * @return FloatingPoint
      * @author stev leibelt <artodeto@arcor.de>
      * @since 2013-08-07
      */
