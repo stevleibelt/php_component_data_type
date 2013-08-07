@@ -46,8 +46,8 @@ abstract class DataTypeAbstract implements DataTypeInterface
      */
     public function __construct($value = null)
     {
-        $this->validateAndSetValue($value);
         $this->lock = new RuntimeLock();
+        $this->validateAndSetValue($value);
     }
 
     /**
