@@ -13,9 +13,9 @@ namespace Net\Bazzline\Component\DataType;
  * @package Net\Bazzline\Component\DataType
  * @author stev leibelt <artodeto@arcor.de>
  * @since 2013-08-03
- * @todo implement ArrayAccess, Iterator, Traversable
+ * @todo implement ArrayAccess, Iterator
  */
-class String extends DataTypeAbstract
+class String extends DataTypeAbstract implements StringInterface
 {
     /**
      * @return int
