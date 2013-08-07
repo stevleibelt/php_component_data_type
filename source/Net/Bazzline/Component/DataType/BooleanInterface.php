@@ -1,70 +1,45 @@
 <?php
 /**
  * @author stev leibelt <artodeto@arcor.de>
- * @since 2013-08-03
+ * @since 2013-08-07 
  */
 
 namespace Net\Bazzline\Component\DataType;
 
 /**
- * Class Boolean
+ * Class BooleanInterface
  *
  * @package Net\Bazzline\Component\DataType
  * @author stev leibelt <artodeto@arcor.de>
- * @since 2013-08-03
+ * @since 2013-08-07
  */
-class Boolean extends DataTypeAbstract implements BooleanInterface
+interface BooleanInterface extends DataTypeInterface
 {
     /**
      * @return bool
      * @author stev leibelt <artodeto@arcor.de>
      * @since 2013-08-03
      */
-    public function isTrue()
-    {
-        return ($this->value === true);
-    }
+    public function isTrue();
 
     /**
      * @return bool
      * @author stev leibelt <artodeto@arcor.de>
      * @since 2013-08-03
      */
-    public function isFalse()
-    {
-        return ($this->value === false);
-    }
+    public function isFalse();
 
     /**
      * @return $this
      * @author stev leibelt <artodeto@arcor.de>
      * @since 2013-08-03
      */
-    public function setFalse()
-    {
-        $this->setValue(false);
-
-        return $this;
-    }
+    public function setFalse();
 
     /**
      * @return $this
      * @author stev leibelt <artodeto@arcor.de>
      * @since 2013-08-03
      */
-    public function setTrue()
-    {
-        $this->setValue(true);
-
-        return $this;
-    }
-
-    /**
-     * @return bool
-     * {@inheritdoc}
-     */
-    protected function castToType($value)
-    {
-        return (bool) $value;
-    }
+    public function setTrue();
 }
