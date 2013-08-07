@@ -6,6 +6,7 @@ This component includes class definitions for php basic data types like:
 * Integer
 * String
 * Numeric
+* DataArray
 
 By using this component, you are able to use type hints also for basic data types.
 
@@ -15,6 +16,7 @@ By using this component, you are able to use type hints also for basic data type
 * Types shipped with useful methods
 * Are comparable with native php types by using "=="
 * Provides generic type casting by implemented "toString()" methods (and so on)
+* Provides type migration by *from* and *to* methods
 
 # Usage
 
