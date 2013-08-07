@@ -13,7 +13,7 @@ namespace Net\Bazzline\Component\DataType;
  * @author stev leibelt <artodeto@arcor.de>
  * @since 2013-08-04
  */
-class DataArray extends DataTypeAbstract implements ArrayableInterface
+class DataArray extends DataTypeAbstract implements DataArrayInterface
 {
     /**
      * @param array $array
