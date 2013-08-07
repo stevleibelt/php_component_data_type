@@ -6,7 +6,6 @@
 
 namespace Net\Bazzline\Component\DataType;
 
-use Net\Bazzline\Component\Lock\LockInterface;
 use Net\Bazzline\Component\Lock\RuntimeLock;
 
 /**
@@ -16,7 +15,7 @@ use Net\Bazzline\Component\Lock\RuntimeLock;
  * @author stev leibelt <artodeto@arcor.de>
  * @since 2013-08-03
  */
-abstract class DataTypeAbstract implements LockInterface
+abstract class DataTypeAbstract implements DataTypeInterface
 {
     /**
      * @var bool
