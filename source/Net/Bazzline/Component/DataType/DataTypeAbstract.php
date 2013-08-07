@@ -46,13 +46,7 @@ abstract class DataTypeAbstract implements DataTypeInterface
      */
     public function __construct($value = null)
     {
-        if (is_resource($value)
-            || is_object($value)) {
-            throw new InvalidArgumentException(
-                'resource or object given'
-            );
-        }
-        $this->setValue($value);
+        $this->validateAndSetValue($value);
         $this->lock = new RuntimeLock();
     }
 
@@ -101,6 +95,19 @@ abstract class DataTypeAbstract implements DataTypeInterface
     }
 
     /**
+     * @param bool|Boolean $boolean
+     * @return $this
+     * @author stev leibelt <artodeto@arcor.de>
+     * @since 2013-08-07
+     */
+    public function fromBoolean($boolean)
+    {
+        $this->validateAndSetValue($boolean);
+
+        return $this;
+    }
+
+    /**
      * @return Boolean
      * @author stev leibelt <artodeto@arcor.de>
      * @since 2013-08-03
@@ -118,6 +125,86 @@ abstract class DataTypeAbstract implements DataTypeInterface
     public function toString()
     {
         return new String($this->value);
+    }
+
+    /**
+     * @param array|DataArray $array
+     * @return $this
+     * @throws InvalidArgumentException
+     * @author stev leibelt <artodeto@arcor.de>
+     * @since 2013-08-07
+     */
+    public function fromArray($array)
+    {
+        $this->validateAndSetValue($array);
+
+        return $this;
+    }
+
+    /**
+     * @return DataArray
+     * @author stev leibelt <artodeto@arcor.de>
+     * @since 2013-08-07
+     */
+    public function toArray()
+    {
+        return new DataArray($this->value);
+    }
+
+    /**
+     * @param float|FloatingPoint $floatingPoint
+     * @return $this
+     * @throws InvalidArgumentException
+     * @author stev leibelt <artodeto@arcor.de>
+     * @since 2013-08-07
+     */
+    public function fromFloatingPoint($floatingPoint)
+    {
+        $this->validateAndSetValue($floatingPoint);
+
+        return $this;
+    }
+
+    /**
+     * @param int|Integer $integer
+     * @return $this
+     * @throws InvalidArgumentException
+     * @author stev leibelt <artodeto@arcor.de>
+     * @since 2013-08-07
+     */
+    public function fromInteger($integer)
+    {
+        $this->validateAndSetValue($integer);
+
+        return $this;
+    }
+
+    /**
+     * @param numeric|Numeric $numeric
+     * @return $this
+     * @throws InvalidArgumentException
+     * @author stev leibelt <artodeto@arcor.de>
+     * @since 2013-08-07
+     */
+    public function fromNumeric($numeric)
+    {
+        $this->validateAndSetValue($numeric);
+
+        return $this;
+    }
+
+    /**
+     * @param string|String $string
+     * @return $this
+     * @throws InvalidArgumentException
+     * @author stev leibelt <artodeto@arcor.de>
+     * @since 2013-08-07
+     */
+    public function fromString($string)
+    {
+        $this->validateAndSetValue($string);
+
+        return $this;
     }
 
     /**
@@ -218,6 +305,29 @@ abstract class DataTypeAbstract implements DataTypeInterface
     public function setName($name)
     {
         $this->lock->setName($name);
+    }
+
+    /**
+     * @param boolean|numeric|integer|float|bool|string|DataTypeInterface $value
+     * @throws InvalidArgumentException
+     * @author stev leibelt <artodeto@arcor.de>
+     * @since 2013-08-07
+     */
+    protected function validateAndSetValue($value)
+    {
+        if (!is_object($value)
+            && !is_resource($value)) {
+            $this->setValue($value);
+        } else {
+            if (is_object($value)
+                && ($value instanceof DataTypeInterface)) {
+                $this->setValue($value->getValue());
+            } else {
+                throw new InvalidArgumentException(
+                    'resource or object given'
+                );
+            }
+        }
     }
 
     /**

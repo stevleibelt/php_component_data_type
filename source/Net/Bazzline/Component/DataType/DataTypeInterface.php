@@ -15,7 +15,7 @@ use Net\Bazzline\Component\Lock\LockInterface;
  * @author stev leibelt <artodeto@arcor.de>
  * @since 2013-08-07
  */
-interface DataTypeInterface extends LockInterface
+interface DataTypeInterface extends LockInterface, ArrayableInterface, BooleanableInterface, FloatingPointableInterface, IntegerableInterface, NumericableInterface, StringableInterface
 {
     /**
      * @param null|string|int|float $value

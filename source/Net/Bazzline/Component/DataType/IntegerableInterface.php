@@ -18,6 +18,7 @@ interface IntegerableInterface
     /**
      * @param int|Integer $integer
      * @return $this
+     * @throws InvalidArgumentException
      * @author stev leibelt <artodeto@arcor.de>
      * @since 2013-08-07
      */

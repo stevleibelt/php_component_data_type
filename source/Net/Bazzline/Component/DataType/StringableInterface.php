@@ -18,6 +18,7 @@ interface StringableInterface
     /**
      * @param string|String $string
      * @return $this
+     * @throws InvalidArgumentException
      * @author stev leibelt <artodeto@arcor.de>
      * @since 2013-08-07
      */
