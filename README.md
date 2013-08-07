@@ -91,8 +91,9 @@ Last but not least [SplTypes](http://php.net/manual/en/intro.spl-types.php) are 
 
 * Add modulo to Numeric
 * Add locking (mark a value as read only)
-* Add Array type
 * Add Date type
+* Add Time type
+* Add DateTime type
 * Add arrayAccess to string
 * Add collection
 * Add examples
