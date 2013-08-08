@@ -59,6 +59,23 @@ class DataTypeAbstractTest extends TestCase
 
     /**
      * @author stev leibelt <artodeto@arcor.de>
+     * @since 2013-08-08
+     */
+    public function testImplementedInterfaces()
+    {
+        $type = $this->createNewType();
+
+        $this->assertInstanceOf('\Net\Bazzline\Component\DataType\ArrayableInterface', $type);
+        $this->assertInstanceOf('\Net\Bazzline\Component\DataType\BooleanableInterface', $type);
+        $this->assertInstanceOf('\Net\Bazzline\Component\DataType\DataTypeInterface', $type);
+        $this->assertInstanceOf('\Net\Bazzline\Component\DataType\FloatingPointableInterface', $type);
+        $this->assertInstanceOf('\Net\Bazzline\Component\DataType\IntegerableInterface', $type);
+        $this->assertInstanceOf('\Net\Bazzline\Component\DataType\NumericableInterface', $type);
+        $this->assertInstanceOf('\Net\Bazzline\Component\DataType\StringableInterface', $type);
+    }
+
+    /**
+     * @author stev leibelt <artodeto@arcor.de>
      * @since 2013-08-03
      */
     public function testSetAndGetValue()
