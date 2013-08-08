@@ -90,6 +90,7 @@ Last but not least [SplTypes](http://php.net/manual/en/intro.spl-types.php) are 
 # To Do
 
 * Cover existing unittest with validation of implemented interfaces
+* Can we use [pack](http://de2.php.net/manual/en/function.pack.php)?
 * Add modulo to Numeric
 * Add locking (mark a value as read only)
 * Add Date type -> check [Joda Time](http://joda-time.sourceforge.net/)
