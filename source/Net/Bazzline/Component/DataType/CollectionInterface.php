@@ -26,7 +26,7 @@ interface CollectionInterface extends ArrayAccess, Countable, Iterator, Iterator
      * Adds element
      *
      * @param $element
-     * @return mixed - the key of the element
+     * @return int - number of elements in the collection
      * @author stev leibelt <artodeto@arcor.de>
      * @since 2013-08-12
      */
@@ -36,7 +36,7 @@ interface CollectionInterface extends ArrayAccess, Countable, Iterator, Iterator
      * Adds element to the beginning
      *
      * @param mixed $element
-     * @return mixed - the key of the element
+     * @return int - number of elements in the collection
      * @author stev leibelt <artodeto@arcor.de>
      * @since 2013-08-12
      */
@@ -141,7 +141,7 @@ interface CollectionInterface extends ArrayAccess, Countable, Iterator, Iterator
      * Adds element to the end
      *
      * @param $element
-     * @return mixed - the key of the element
+     * @return int - number of elements in the collection
      * @author stev leibelt <artodeto@arcor.de>
      * @since 2013-08-12
      */

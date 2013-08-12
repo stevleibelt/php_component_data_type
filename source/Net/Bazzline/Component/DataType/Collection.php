@@ -30,7 +30,7 @@ class Collection extends ArrayObject implements CollectionInterface
      * Adds element
      *
      * @param $element
-     * @return mixed - the key of the element
+     * @return int - number of elements in the collection
      * @author stev leibelt <artodeto@arcor.de>
      * @since 2013-08-12
      */
@@ -185,7 +185,7 @@ class Collection extends ArrayObject implements CollectionInterface
      * Adds element to the end
      *
      * @param $element
-     * @return mixed - the key of the element
+     * @return int - number of elements in the collection
      * @author stev leibelt <artodeto@arcor.de>
      * @since 2013-08-12
      */
