@@ -34,7 +34,7 @@ class Collection extends ArrayObject implements CollectionInterface
      * @author stev leibelt <artodeto@arcor.de>
      * @since 2013-08-12
      */
-    public function add($element)
+    public function push($element)
     {
         return $this->prepend($element);
     }

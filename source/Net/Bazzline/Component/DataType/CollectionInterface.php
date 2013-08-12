@@ -23,24 +23,14 @@ use Serializable;
 interface CollectionInterface extends ArrayAccess, Countable, Iterator, IteratorAggregate, Serializable
 {
     /**
-     * Adds element
+     * Adds element to the end
      *
      * @param $element
      * @return int - number of elements in the collection
      * @author stev leibelt <artodeto@arcor.de>
      * @since 2013-08-12
      */
-    public function add($element);
-
-    /**
-     * Adds element to the beginning
-     *
-     * @param mixed $element
-     * @return int - number of elements in the collection
-     * @author stev leibelt <artodeto@arcor.de>
-     * @since 2013-08-12
-     */
-    public function append($element);
+    public function push($element);
 
     /**
      * Validates if provided element is part of the collection
@@ -138,7 +128,7 @@ interface CollectionInterface extends ArrayAccess, Countable, Iterator, Iterator
     public function pop();
 
     /**
-     * Adds element to the end
+     * Adds element to the beginning
      *
      * @param $element
      * @return int - number of elements in the collection
