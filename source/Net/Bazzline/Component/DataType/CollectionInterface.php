@@ -7,6 +7,7 @@
 namespace Net\Bazzline\Component\DataType;
 
 use ArrayAccess;
+use Countable;
 use Iterator;
 use IteratorAggregate;
 use Serializable;
@@ -19,7 +20,7 @@ use Serializable;
  * @author stev leibelt <artodeto@arcor.de>
  * @since 2013-08-12
  */
-interface CollectionInterface extends ArrayAccess, Iterator, IteratorAggregate, Serializable
+interface CollectionInterface extends ArrayAccess, Countable, Iterator, IteratorAggregate, Serializable
 {
     /**
      * Adds element
