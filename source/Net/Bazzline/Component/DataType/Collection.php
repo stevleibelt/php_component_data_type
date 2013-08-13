@@ -49,7 +49,7 @@ class Collection extends ArrayObject implements CollectionInterface
      */
     public function contains($element)
     {
-        // TODO: Implement contains() method.
+        return in_array($element, $this->getArrayCopy(), true);
     }
 
     /**
