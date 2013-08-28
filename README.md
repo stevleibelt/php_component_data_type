@@ -10,6 +10,9 @@ This component includes class definitions for php basic data types like:
 
 By using this component, you are able to use type hints also for basic data types.
 
+The build status of the current master branch is tracked by Travis CI: 
+[![Build Status](https://travis-ci.org/stevleibelt/php_component_data_type.png?branch=master)](http://travis-ci.org/stevleibelt/php_component_data_type)
+
 # Features
 
 * Enables type hints for basic php types
