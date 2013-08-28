@@ -82,8 +82,6 @@ class DataTypeAbstractTest extends TestCase
     {
         $value = 42;
         $type = $this->createNewType($value);
-        $type->shouldReceive('castToType')
-            ->never();
 
         $this->assertInstanceOf('\Net\Bazzline\Component\DataType\DataTypeAbstract', $type->setValue($value));
     }
