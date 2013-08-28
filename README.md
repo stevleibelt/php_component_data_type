@@ -1,6 +1,7 @@
 # PHP Component - Data Type
 
 This component includes class definitions for php basic data types like:
+
 * Boolean
 * Floating point
 * Integer
