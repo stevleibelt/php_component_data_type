@@ -211,6 +211,18 @@ class DataArray extends DataTypeAbstract implements DataArrayInterface
     }
 
     /**
+     * @param DataArrayInterface $dataArray
+     * @param bool $overwrite
+     * @return $this
+     * @author stev leibelt <artodeto@arcor.de>
+     * @since 2013-08-31
+     */
+    public function merge(DataArrayInterface $dataArray, $overwrite = true)
+    {
+        // TODO: Implement merge() method.
+    }
+
+    /**
      * @param mixed $value
      * @return array
      * @author stev leibelt <artodeto@arcor.de>

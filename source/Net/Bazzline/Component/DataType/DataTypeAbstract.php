@@ -134,7 +134,7 @@ abstract class DataTypeAbstract implements DataTypeInterface
      * @author stev leibelt <artodeto@arcor.de>
      * @since 2013-08-07
      */
-    public function fromArray($array)
+    public function fromArray(array $array)
     {
         $this->validateAndSetValue($array);
 
