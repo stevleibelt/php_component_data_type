@@ -22,7 +22,7 @@ interface ArrayableInterface
      * @author stev leibelt <artodeto@arcor.de>
      * @since 2013-08-07
      */
-    public function fromArray($array);
+    public function fromArray(array $array);
 
     /**
      * @return DataArray
