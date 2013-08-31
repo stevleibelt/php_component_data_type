@@ -19,5 +19,12 @@ use Iterator;
  */
 interface DataArrayInterface extends ArrayAccess, Countable, Iterator, DataTypeInterface
 {
-
+    /**
+     * @param DataArrayInterface $dataArray
+     * @param bool $overwrite
+     * @return $this
+     * @author stev leibelt <artodeto@arcor.de>
+     * @since 2013-08-31
+     */
+    public function merge(DataArrayInterface $dataArray, $overwrite = true);
 }
