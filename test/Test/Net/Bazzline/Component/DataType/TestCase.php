@@ -6,6 +6,7 @@
 
 namespace Test\Net\Bazzline\Component\DataType;
 
+use Mockery;
 use PHPUnit_Framework_TestCase;
 
 /**
@@ -17,4 +18,12 @@ use PHPUnit_Framework_TestCase;
  */
 class TestCase extends  PHPUnit_Framework_TestCase
 {
+    /**
+     * @author stev leibelt <artodeto@arcor.de>
+     * @since 2013-08-03
+     */
+    protected function tearDown()
+    {
+        Mockery::close();
+    }
 }

@@ -18,15 +18,6 @@ use Mockery;
 class DataTypeAbstractTest extends TestCase
 {
     /**
-     * @author stev leibelt <artodeto@arcor.de>
-     * @since 2013-08-03
-     */
-    protected function tearDown()
-    {
-        Mockery::close();
-    }
-
-    /**
      * @return array
      * @author stev leibelt <artodeto@arcor.de>
      * @since 2013-08-03
