@@ -229,7 +229,7 @@ class DataArray extends DataTypeAbstract implements DataArrayInterface
                 } else if ($value instanceof self
                     && $this->value[$key] instanceof self) {
                     $this->value[$key]->merge($value);
-                } else {
+                } else if ($overwrite) {
                     if ($value instanceof self) {
                         //new static for php 5.3. late static binding
                         //we need to do this since it is possible we are dealing

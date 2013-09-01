@@ -25,7 +25,7 @@ class DataArrayTest extends TestCase
     public static function mergeTestCaseDataProvider()
     {
         return array(
-            'simple array merge with simple array' => array(
+            'merge plain array with plain array' => array(
                 'origin' => new DataArray(array(
                     'foo' => 'foo',
                     'bar' => 'foo'
@@ -37,7 +37,24 @@ class DataArrayTest extends TestCase
                 'expected' => new DataArray(array(
                     'foo' => 'bar',
                     'bar' => 'foo'
-                ))
+                )),
+                'overwrite' => true
+            ),
+            'merge plain array with plain array and overwrite off' => array(
+                'origin' => new DataArray(array(
+                    'foo' => 'bar',
+                    'bar' => 'foo'
+                )),
+                'merge' => new DataArray(array(
+                    'bar' => 'bar',
+                    'foobar' => 'barfoo'
+                )),
+                'exptected' => new DataArray(array(
+                    'foo' => 'bar',
+                    'bar' => 'foo',
+                    'foobar' => 'barfoo'
+                )),
+                'overwrite' => false
             )
         );
     }
@@ -48,12 +65,13 @@ class DataArrayTest extends TestCase
      * @param DataArray $origin
      * @param DataArray $merge
      * @param DataArray $expected
+     * @param bool $overwrite
      * @author stev leibelt <artodeto@arcor.de>
      * @since 2013-09-01
      */
-    public function testMerge(DataArray $origin, DataArray $merge, DataArray $expected)
+    public function testMerge(DataArray $origin, DataArray $merge, DataArray $expected, $overwrite)
     {
-        $origin->merge($merge);
+        $origin->merge($merge, $overwrite);
 
         $this->assertEquals($origin, $expected);
     }
