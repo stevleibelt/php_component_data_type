@@ -211,6 +211,8 @@ class DataArray extends DataTypeAbstract implements DataArrayInterface
     }
 
     /**
+     * Heavily inspired by \Zend\Config\Config
+     *  https://github.com/weierophinney/Component_ZendConfig/blob/master/Config.php
      * @param DataArrayInterface $dataArray
      * @param bool $overwrite
      * @return $this
@@ -219,7 +221,34 @@ class DataArray extends DataTypeAbstract implements DataArrayInterface
      */
     public function merge(DataArrayInterface $dataArray, $overwrite = true)
     {
-        // TODO: Implement merge() method.
+        foreach ($dataArray as $key => $value) {
+            //http://juliusbeckmann.de/blog/php-benchmark-isset-or-array_key_exists.html
+            if (isset($this->value[$key])) {
+                if (is_int($key)) {
+                    $this->value[] = $value;
+                } else if ($value instanceof self
+                    && $this->value[$key] instanceof self) {
+                    $this->value[$key]->merge($value);
+                } else {
+                    if ($value instanceof self) {
+                        //new static for php 5.3. late static binding
+                        //we need to do this since it is possible we are dealing
+                        // with a derived class
+                        $this->value[$key] = new static($value->toArray());
+                    } else {
+                        $this->value[$key] = $value;
+                    }
+                }
+            } else {
+                if ($value instanceof self) {
+                    $this->value[$key] = new static($value->toArray());
+                } else {
+                    $this->value[$key] = $value;
+                }
+            }
+        }
+
+        return $this;
     }
 
     /**
