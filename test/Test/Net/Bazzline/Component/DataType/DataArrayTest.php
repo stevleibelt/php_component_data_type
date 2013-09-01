@@ -21,11 +21,12 @@ class DataArrayTest extends TestCase
      * @return array
      * @author stev leibelt <artodeto@arcor.de>
      * @since 2013-09-01
+     * @todo testcases, testcases, testcases
      */
     public static function mergeTestCaseDataProvider()
     {
         return array(
-            'plain array with plain array' => array(
+            'plain with plain' => array(
                 'origin' => new DataArray(array(
                     'foo' => 'foo',
                     'bar' => 'foo'
@@ -40,7 +41,7 @@ class DataArrayTest extends TestCase
                 )),
                 'overwrite' => true
             ),
-            'plain array with plain array and overwrite off' => array(
+            'plain with plain and overwrite off' => array(
                 'origin' => new DataArray(array(
                     'foo' => 'bar',
                     'bar' => 'foo'
@@ -56,7 +57,7 @@ class DataArrayTest extends TestCase
                 )),
                 'overwrite' => false
             ),
-            'plain array with complex array' => array(
+            'plain with complex' => array(
                 'origin' => new DataArray(array(
                     'foo' => 'bar',
                     'complex' => 'plain'
@@ -84,6 +85,24 @@ class DataArrayTest extends TestCase
                         'DataArray' => new DataArray(array(
                             'the message' => 'is love'
                         ))
+                    )
+                )),
+                'overwrite' => true
+            ),
+            'complex with complex' => array(
+                'origin' => new DataArray(array(
+                    'foo' => array(
+                        'bar' => 'barz'
+                    )
+                )),
+                'merge' => new DataArray(array(
+                    'foo' => array(
+                        'bar' => 'foobar'
+                    )
+                )),
+                'expected' => new DataArray(array(
+                    'foo' => array(
+                        'bar' => 'foobar'
                     )
                 )),
                 'overwrite' => true
