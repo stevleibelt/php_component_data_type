@@ -1,6 +1,6 @@
 <?php
 /**
- * @author stev leibelt <artodeto@arcor.de>
+ * @author stev leibelt <artodeto@bazzline.net>
  * @since 2013-08-03 
  */
 
@@ -12,13 +12,13 @@ use Net\Bazzline\Component\DataType\Numeric;
  * Class NumericTest
  *
  * @package Test\Net\Bazzline\Component\DataType
- * @author stev leibelt <artodeto@arcor.de>
+ * @author stev leibelt <artodeto@bazzline.net>
  * @since 2013-08-03
  */
 class NumericTest extends TestCase
 {
     /**
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-03
      */
     public function testAdd()
@@ -30,7 +30,7 @@ class NumericTest extends TestCase
     }
 
     /**
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-03
      */
     public function testSubtract()
@@ -42,7 +42,7 @@ class NumericTest extends TestCase
     }
 
     /**
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-03
      */
     public function testMultiply()
@@ -54,7 +54,7 @@ class NumericTest extends TestCase
     }
 
     /**
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-03
      */
     public function testDevide()
@@ -67,7 +67,7 @@ class NumericTest extends TestCase
 
     /**
      * @return array
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-03
      */
     public static function positiveNegativeAndZeroDataProvider()
@@ -137,7 +137,7 @@ class NumericTest extends TestCase
      * @param bool $isPositive
      * @param bool $isNegative
      * @param bool $isZero
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-03
      */
     public function testIsPositiveIsNegativeAndIsZero($value, $isPositive, $isNegative, $isZero)
@@ -184,7 +184,7 @@ class NumericTest extends TestCase
      * @param bool $isGreater
      * @param bool $isLess
      * @param bool $isEqual
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-03
      */
     public function testComparisonMethods($value, $comparison, $isGreater, $isLess, $isEqual)
@@ -199,7 +199,7 @@ class NumericTest extends TestCase
     }
 
     /**
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-04
      */
     public function testEqualValue()
@@ -214,7 +214,7 @@ class NumericTest extends TestCase
     }
 
     /**
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-04
      */
     public function testWorkWithNativeType()
@@ -229,7 +229,7 @@ class NumericTest extends TestCase
     /**
      * @param mixed $value
      * @return Numeric
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-03
      */
     private function createNewType($value = null)

@@ -1,6 +1,6 @@
 <?php
 /**
- * @author stev leibelt <artodeto@arcor.de>
+ * @author stev leibelt <artodeto@bazzline.net>
  * @since 2013-08-04 
  */
 
@@ -12,14 +12,14 @@ use Net\Bazzline\Component\DataType\String;
  * Class StringTest
  *
  * @package Test\Net\Bazzline\Component\DataType
- * @author stev leibelt <artodeto@arcor.de>
+ * @author stev leibelt <artodeto@bazzline.net>
  * @since 2013-08-04
  */
 class StringTest extends TestCase
 {
     /**
      * @return array
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-04
      */
     public static function lengthTestCases()
@@ -53,7 +53,7 @@ class StringTest extends TestCase
      *
      * @param string $value
      * @param string $expectedLength
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-03
      */
     public function testLength($value, $expectedLength)
@@ -65,7 +65,7 @@ class StringTest extends TestCase
 
     /**
      * @return array
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-04
      */
     public static function trimTestCases()
@@ -103,7 +103,7 @@ class StringTest extends TestCase
      *
      * @param string $value
      * @param string $trimmedValue
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-04
      */
     public function testTrim($value, $trimmedValue)
@@ -116,7 +116,7 @@ class StringTest extends TestCase
 
     /**
      * @return array
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-04
      */
     public static function replaceTestCases()
@@ -217,7 +217,7 @@ class StringTest extends TestCase
      * @param mixed $replace
      * @param bool $ignoreCase
      * @param string $expectedValue
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-04
      */
     public function testReplace($value, $search, $replace, $ignoreCase, $expectedValue)
@@ -230,7 +230,7 @@ class StringTest extends TestCase
 
     /**
      * @return array
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-04
      */
     public static function invalidContainsTestCases()
@@ -251,7 +251,7 @@ class StringTest extends TestCase
      * @expectedExceptionMessage empty string provided
      *
      * @param mixed $value
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-04
      */
     public function testContainsWithInvalidArguments($value)
@@ -263,7 +263,7 @@ class StringTest extends TestCase
 
     /**
      * @return array
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-04
      */
     public static function containsTestCases()
@@ -297,7 +297,7 @@ class StringTest extends TestCase
      * @param string $contains
      * @param bool $ignoreCase
      * @param string $contains
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-04
      */
     public function testContains($value, $search, $ignoreCase, $contains)
@@ -309,7 +309,7 @@ class StringTest extends TestCase
 
     /**
      * @return array
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-04
      */
     public static function invalidStartsWithTestCases()
@@ -341,7 +341,7 @@ class StringTest extends TestCase
      *
      * @param string $value
      * @param string $prefix
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-04
      */
     public function testInvalidArgumentsForStartsWith($value, $prefix)
@@ -353,7 +353,7 @@ class StringTest extends TestCase
 
     /**
      * @return array
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-04
      */
     public static function startsWithTestCases()
@@ -399,7 +399,7 @@ class StringTest extends TestCase
      * @param string $search
      * @param bool $ignoreCase
      * @param string $startsWith
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-04
      */
     public function testStartsWith($value, $search, $ignoreCase, $startsWith)
@@ -411,7 +411,7 @@ class StringTest extends TestCase
 
     /**
      * @return array
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-04
      */
     public static function endsWithTestCases()
@@ -463,7 +463,7 @@ class StringTest extends TestCase
      * @param string $search
      * @param bool $ignoreCase
      * @param string $endsWith
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-04
      */
     public function testEndsWith($value, $search, $ignoreCase, $endsWith)
@@ -475,7 +475,7 @@ class StringTest extends TestCase
 
     /**
      * @return array
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-04
      */
     public static function toLowerOrUpperTestCases()
@@ -515,7 +515,7 @@ class StringTest extends TestCase
      * @param string $value
      * @param string $toLower
      * @param string $toUpper
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-04
      */
     public function testToLowerOrUpper($value, $toLower, $toUpper)
@@ -527,7 +527,7 @@ class StringTest extends TestCase
     }
 
     /**
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-04
      */
     public function testEqualValue()
@@ -540,7 +540,7 @@ class StringTest extends TestCase
     }
 
     /**
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-04
      */
     public function testWorkWithNativeType()
@@ -555,7 +555,7 @@ class StringTest extends TestCase
     /**
      * @param mixed $value
      * @return \Net\Bazzline\Component\DataType\String
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-04
      */
     private function createNewType($value = null)

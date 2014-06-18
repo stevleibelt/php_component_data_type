@@ -1,6 +1,6 @@
 <?php
 /**
- * @author stev leibelt <artodeto@arcor.de>
+ * @author stev leibelt <artodeto@bazzline.net>
  * @since 2013-08-03 
  */
 
@@ -12,14 +12,14 @@ use Net\Bazzline\Component\DataType\Integer;
  * Class IntegerTest
  *
  * @package Test\Net\Bazzline\Component\DataType
- * @author stev leibelt <artodeto@arcor.de>
+ * @author stev leibelt <artodeto@bazzline.net>
  * @since 2013-08-03
  */
 class IntegerTest extends TestCase
 {
     /**
      * @return array
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-03
      */
     public static function oddOrEvenDataProvider()
@@ -69,7 +69,7 @@ class IntegerTest extends TestCase
      * @param mixed $value
      * @param bool $isOdd
      * @param bool $isEven
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-03
      */
     public function testIsOddOrEven($value, $isOdd, $isEven)
@@ -81,7 +81,7 @@ class IntegerTest extends TestCase
     }
 
     /**
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-04
      */
     public function testEqualValue()
@@ -94,7 +94,7 @@ class IntegerTest extends TestCase
     }
 
     /**
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-04
      */
     public function testWorkWithNativeType()
@@ -109,7 +109,7 @@ class IntegerTest extends TestCase
     /**
      * @param mixed $value
      * @return \Net\Bazzline\Component\DataType\Integer
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-03
      */
     private function createNewType($value = null)

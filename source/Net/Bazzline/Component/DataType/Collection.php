@@ -1,6 +1,6 @@
 <?php
 /**
- * @author stev leibelt <artodeto@arcor.de>
+ * @author stev leibelt <artodeto@bazzline.net>
  * @since 2013-08-12 
  */
 
@@ -14,14 +14,14 @@ use ArrayIterator;
  * Uses http://php.net/manual/en/class.arrayobject.php
  *
  * @package Net\Bazzline\Component\DataType
- * @author stev leibelt <artodeto@arcor.de>
+ * @author stev leibelt <artodeto@bazzline.net>
  * @since 2013-08-12
  */
 class Collection extends ArrayObject implements CollectionInterface
 {
     /**
      * @var \ArrayIterator
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-12
      */
     protected $iterator;
@@ -31,7 +31,7 @@ class Collection extends ArrayObject implements CollectionInterface
      *
      * @param $element
      * @return int - number of elements in the collection
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-12
      */
     public function push($element)
@@ -44,7 +44,7 @@ class Collection extends ArrayObject implements CollectionInterface
      *
      * @param $element
      * @return bool
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-12
      */
     public function contains($element)
@@ -56,7 +56,7 @@ class Collection extends ArrayObject implements CollectionInterface
      * Removes all elements from the collection
      *
      * @return $this
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-12
      */
     public function clear()
@@ -87,7 +87,7 @@ class Collection extends ArrayObject implements CollectionInterface
      *
      * @param CollectionInterface $collection
      * @return CollectionInterface
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-12
      */
     public function diff(CollectionInterface $collection)
@@ -100,7 +100,7 @@ class Collection extends ArrayObject implements CollectionInterface
      *
      * @param $key
      * @return mixed
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-12
      */
     public function get($key)
@@ -113,7 +113,7 @@ class Collection extends ArrayObject implements CollectionInterface
      *
      * @param $key
      * @return mixed
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-12
      */
     public function has($key)
@@ -125,7 +125,7 @@ class Collection extends ArrayObject implements CollectionInterface
      * Validates if current element is on an even position in the collection
      *
      * @return bool
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-12
      */
     public function isEven()
@@ -137,7 +137,7 @@ class Collection extends ArrayObject implements CollectionInterface
      * Validates if current element is the first element in the collection
      *
      * @return bool
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-12
      */
     public function isFirst()
@@ -149,7 +149,7 @@ class Collection extends ArrayObject implements CollectionInterface
      * Validates if current element is the first element in the collection
      *
      * @return bool
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-12
      */
     public function isLast()
@@ -161,7 +161,7 @@ class Collection extends ArrayObject implements CollectionInterface
      * Validates if current element is on an odd position in the collection
      *
      * @return bool
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-12
      */
     public function isOdd()
@@ -173,7 +173,7 @@ class Collection extends ArrayObject implements CollectionInterface
      * Returns removed element from the end
      *
      * @return mixed
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-12
      */
     public function pop()
@@ -186,7 +186,7 @@ class Collection extends ArrayObject implements CollectionInterface
      *
      * @param $element
      * @return int - number of elements in the collection
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-12
      */
     public function prepend($element)
@@ -199,7 +199,7 @@ class Collection extends ArrayObject implements CollectionInterface
      *
      * @param $key
      * @return mixed
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-12
      */
     public function remove($key)
@@ -211,7 +211,7 @@ class Collection extends ArrayObject implements CollectionInterface
      * Returns removed element from the beginning
      *
      * @return mixed
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-12
      */
     public function shift()

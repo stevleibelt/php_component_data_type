@@ -1,6 +1,6 @@
 <?php
 /**
- * @author stev leibelt <artodeto@arcor.de>
+ * @author stev leibelt <artodeto@bazzline.net>
  * @since 2013-08-03 
  */
 
@@ -12,14 +12,14 @@ use Mockery;
  * Class DataTypeAbstractTest
  *
  * @package Test\Net\Bazzline\Component\DataType
- * @author stev leibelt <artodeto@arcor.de>
+ * @author stev leibelt <artodeto@bazzline.net>
  * @since 2013-08-03
  */
 class DataTypeAbstractTest extends TestCase
 {
     /**
      * @return array
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-03
      */
     public static function invalidValueProvider()
@@ -40,7 +40,7 @@ class DataTypeAbstractTest extends TestCase
      * @dataProvider invalidValueProvider
      *
      * @param mixed $value
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-03
      */
     public function testConstructorWithInvalidValues($value)
@@ -49,7 +49,7 @@ class DataTypeAbstractTest extends TestCase
     }
 
     /**
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-08
      */
     public function testImplementedInterfaces()
@@ -66,7 +66,7 @@ class DataTypeAbstractTest extends TestCase
     }
 
     /**
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-03
      */
     public function testSetAndGetValue()
@@ -78,7 +78,7 @@ class DataTypeAbstractTest extends TestCase
     }
 
     /**
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-03
      */
     public function testTypeCastMethods()
@@ -95,7 +95,7 @@ class DataTypeAbstractTest extends TestCase
     /**
      * @param $value
      * @return Mockery\MockInterface|\Net\Bazzline\Component\DataType\DataTypeAbstract
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-03
      */
     private function createNewType($value = null)

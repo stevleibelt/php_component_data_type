@@ -1,6 +1,6 @@
 <?php
 /**
- * @author stev leibelt <artodeto@arcor.de>
+ * @author stev leibelt <artodeto@bazzline.net>
  * @since 2013-09-01 
  */
 
@@ -12,14 +12,14 @@ use Net\Bazzline\Component\DataType\DataArray;
  * Class DataArrayTest
  *
  * @package Test\Net\Bazzline\Component\DataType
- * @author stev leibelt <artodeto@arcor.de>
+ * @author stev leibelt <artodeto@bazzline.net>
  * @since 2013-09-01
  */
 class DataArrayTest extends TestCase
 {
     /**
      * @return array
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-09-01
      * @todo testcases, testcases, testcases
      */
@@ -117,7 +117,7 @@ class DataArrayTest extends TestCase
      * @param DataArray $merge
      * @param DataArray $expected
      * @param bool $overwrite
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-09-01
      */
     public function testMerge(DataArray $origin, DataArray $merge, DataArray $expected, $overwrite)

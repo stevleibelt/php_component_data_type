@@ -1,6 +1,6 @@
 <?php
 /**
- * @author stev leibelt <artodeto@arcor.de>
+ * @author stev leibelt <artodeto@bazzline.net>
  * @since 2013-08-03
  */
 
@@ -12,28 +12,28 @@ use Net\Bazzline\Component\Lock\RuntimeLock;
  * Class DataTypeAbstract
  *
  * @package Net\Bazzline\Component\DataType
- * @author stev leibelt <artodeto@arcor.de>
+ * @author stev leibelt <artodeto@bazzline.net>
  * @since 2013-08-03
  */
 abstract class DataTypeAbstract implements DataTypeInterface
 {
     /**
      * @var bool
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-04
      */
     protected $isEmpty;
 
     /**
      * @var \Net\Bazzline\Component\Lock\RuntimeLock
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-05
      */
     protected $lock;
 
     /**
      * @var mixed
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-03
      */
     protected $value;
@@ -41,7 +41,7 @@ abstract class DataTypeAbstract implements DataTypeInterface
     /**
      * @param null|string|int|float $value
      * @throws InvalidArgumentException
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-03
      */
     public function __construct($value = null)
@@ -54,7 +54,7 @@ abstract class DataTypeAbstract implements DataTypeInterface
      * @param $value
      * @return $this
      * @throws RuntimeException
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-03
      */
     public function setValue($value)
@@ -76,7 +76,7 @@ abstract class DataTypeAbstract implements DataTypeInterface
 
     /**
      * @return mixed
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-03
      */
     public function getValue()
@@ -86,7 +86,7 @@ abstract class DataTypeAbstract implements DataTypeInterface
 
     /**
      * @return bool
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-04
      */
     public function isEmpty()
@@ -97,7 +97,7 @@ abstract class DataTypeAbstract implements DataTypeInterface
     /**
      * @param bool|Boolean $boolean
      * @return $this
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-07
      */
     public function fromBoolean($boolean)
@@ -109,7 +109,7 @@ abstract class DataTypeAbstract implements DataTypeInterface
 
     /**
      * @return Boolean
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-03
      */
     public function toBoolean()
@@ -119,7 +119,7 @@ abstract class DataTypeAbstract implements DataTypeInterface
 
     /**
      * @return String
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-03
      */
     public function toString()
@@ -131,7 +131,7 @@ abstract class DataTypeAbstract implements DataTypeInterface
      * @param array|DataArray $array
      * @return $this
      * @throws InvalidArgumentException
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-07
      */
     public function fromArray(array $array)
@@ -143,7 +143,7 @@ abstract class DataTypeAbstract implements DataTypeInterface
 
     /**
      * @return DataArray
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-07
      */
     public function toArray()
@@ -155,7 +155,7 @@ abstract class DataTypeAbstract implements DataTypeInterface
      * @param float|FloatingPoint $floatingPoint
      * @return $this
      * @throws InvalidArgumentException
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-07
      */
     public function fromFloatingPoint($floatingPoint)
@@ -169,7 +169,7 @@ abstract class DataTypeAbstract implements DataTypeInterface
      * @param int|Integer $integer
      * @return $this
      * @throws InvalidArgumentException
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-07
      */
     public function fromInteger($integer)
@@ -183,7 +183,7 @@ abstract class DataTypeAbstract implements DataTypeInterface
      * @param numeric|Numeric $numeric
      * @return $this
      * @throws InvalidArgumentException
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-07
      */
     public function fromNumeric($numeric)
@@ -197,7 +197,7 @@ abstract class DataTypeAbstract implements DataTypeInterface
      * @param string|String $string
      * @return $this
      * @throws InvalidArgumentException
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-07
      */
     public function fromString($string)
@@ -209,7 +209,7 @@ abstract class DataTypeAbstract implements DataTypeInterface
 
     /**
      * @return Numeric
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-03
      */
     public function toNumeric()
@@ -219,7 +219,7 @@ abstract class DataTypeAbstract implements DataTypeInterface
 
     /**
      * @return FloatingPoint
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-03
      */
     public function toFloatingPoint()
@@ -229,7 +229,7 @@ abstract class DataTypeAbstract implements DataTypeInterface
 
     /**
      * @return Integer
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-03
      */
     public function toInteger()
@@ -239,7 +239,7 @@ abstract class DataTypeAbstract implements DataTypeInterface
 
     /**
      * @return string
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-03
      */
     public function __toString()
@@ -251,7 +251,7 @@ abstract class DataTypeAbstract implements DataTypeInterface
      * Validates if lock is acquired
      *
      * @return boolean
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-01-03
      */
     public function isLocked()
@@ -263,7 +263,7 @@ abstract class DataTypeAbstract implements DataTypeInterface
      * Acquires lock
      *
      * @throws \RuntimeException
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-01-03
      */
     public function acquire()
@@ -275,7 +275,7 @@ abstract class DataTypeAbstract implements DataTypeInterface
      * Release lock
      *
      * @throws \RuntimeException
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-01-03
      */
     public function release()
@@ -287,7 +287,7 @@ abstract class DataTypeAbstract implements DataTypeInterface
      * Returns name or default
      *
      * @return string
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-01-03
      */
     public function getName()
@@ -299,7 +299,7 @@ abstract class DataTypeAbstract implements DataTypeInterface
      * Sets name
      *
      * @param string $name - name of the lock
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-01-03
      */
     public function setName($name)
@@ -310,7 +310,7 @@ abstract class DataTypeAbstract implements DataTypeInterface
     /**
      * @param boolean|numeric|integer|float|bool|string|DataTypeInterface $value
      * @throws InvalidArgumentException
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-07
      */
     protected function validateAndSetValue($value)
@@ -333,7 +333,7 @@ abstract class DataTypeAbstract implements DataTypeInterface
     /**
      * @param mixed $value
      * @return mixed
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-03
      */
     abstract protected function castToType($value);

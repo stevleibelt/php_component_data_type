@@ -1,6 +1,6 @@
 <?php
 /**
- * @author stev leibelt <artodeto@arcor.de>
+ * @author stev leibelt <artodeto@bazzline.net>
  * @since 2013-08-03 
  */
 
@@ -10,7 +10,7 @@ namespace Net\Bazzline\Component\DataType;
  * Class Numeric
  *
  * @package Net\Bazzline\Component\DataType
- * @author stev leibelt <artodeto@arcor.de>
+ * @author stev leibelt <artodeto@bazzline.net>
  * @since 2013-08-03
  */
 class Numeric extends DataTypeAbstract implements NumericInterface
@@ -18,7 +18,7 @@ class Numeric extends DataTypeAbstract implements NumericInterface
     /**
      * @param mixed $plus
      * @return $this
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-03
      */
     public function add($plus = 1)
@@ -31,7 +31,7 @@ class Numeric extends DataTypeAbstract implements NumericInterface
     /**
      * @param mixed $minus
      * @return $this
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-03
      */
     public function subtract($minus = 1)
@@ -44,7 +44,7 @@ class Numeric extends DataTypeAbstract implements NumericInterface
     /**
      * @param mixed $times
      * @return $this
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-03
      */
     public function multiply($times = 1)
@@ -57,7 +57,7 @@ class Numeric extends DataTypeAbstract implements NumericInterface
     /**
      * @param $divisor
      * @return $this
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-03
      */
     public function divide($divisor = 1)
@@ -69,7 +69,7 @@ class Numeric extends DataTypeAbstract implements NumericInterface
 
     /**
      * @return bool
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-03
      */
     public function isPositive()
@@ -79,7 +79,7 @@ class Numeric extends DataTypeAbstract implements NumericInterface
 
     /**
      * @return bool
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-03
      */
     public function isNegative()
@@ -89,7 +89,7 @@ class Numeric extends DataTypeAbstract implements NumericInterface
 
     /**
      * @return bool
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-03
      */
     public function isZero()
@@ -100,7 +100,7 @@ class Numeric extends DataTypeAbstract implements NumericInterface
     /**
      * @param $number
      * @return bool
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-03
      */
     public function isEqual($number)
@@ -111,7 +111,7 @@ class Numeric extends DataTypeAbstract implements NumericInterface
     /**
      * @param $number
      * @return bool
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-03
      */
     public function isGreater($number)
@@ -122,7 +122,7 @@ class Numeric extends DataTypeAbstract implements NumericInterface
     /**
      * @param $number
      * @return bool
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-03
      */
     public function isGreaterOrEqual($number)
@@ -133,7 +133,7 @@ class Numeric extends DataTypeAbstract implements NumericInterface
     /**
      * @param $number
      * @return bool
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-03
      */
     public function isLess($number)
@@ -144,7 +144,7 @@ class Numeric extends DataTypeAbstract implements NumericInterface
     /**
      * @param $number
      * @return bool
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-03
      */
     public function isLessOrEqual($number)
@@ -155,7 +155,7 @@ class Numeric extends DataTypeAbstract implements NumericInterface
     /**
      * @param mixed $value
      * @return mixed
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-03
      */
     protected function castToType($value)

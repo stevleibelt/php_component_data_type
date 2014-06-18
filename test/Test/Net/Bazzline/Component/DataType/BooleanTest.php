@@ -1,6 +1,6 @@
 <?php
 /**
- * @author stev leibelt <artodeto@arcor.de>
+ * @author stev leibelt <artodeto@bazzline.net>
  * @since 2013-08-03 
  */
 
@@ -12,13 +12,13 @@ use Net\Bazzline\Component\DataType\Boolean;
  * Class BooleanTest
  *
  * @package Net\Bazzline\Component\DataType
- * @author stev leibelt <artodeto@arcor.de>
+ * @author stev leibelt <artodeto@bazzline.net>
  * @since 2013-08-03
  */
 class BooleanTest extends TestCase
 {
     /**
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-03
      */
     public function testNoValueSet()
@@ -34,7 +34,7 @@ class BooleanTest extends TestCase
 
     /**
      * @return array
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-03
      */
     public static function testCaseProvider()
@@ -108,7 +108,7 @@ class BooleanTest extends TestCase
      * @param bool $isFalse
      * @param bool $isTrue
      * @param bool $isEmpty
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-03
      */
     public function testSetAndGet($value, $expectedValue, $asString, $isFalse, $isTrue, $isEmpty)
@@ -131,7 +131,7 @@ class BooleanTest extends TestCase
      * @param string $asString
      * @param bool $isFalse
      * @param bool $isTrue
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-03
      */
     public function testConstructor($value, $expectedValue, $asString, $isFalse, $isTrue)
@@ -145,7 +145,7 @@ class BooleanTest extends TestCase
     }
 
     /**
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-03
      */
     public function testSetFalse()
@@ -160,7 +160,7 @@ class BooleanTest extends TestCase
     }
 
     /**
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-03
      */
     public function testSetTrue()
@@ -175,7 +175,7 @@ class BooleanTest extends TestCase
     }
 
     /**
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-04
      */
     public function testEqualValue()
@@ -188,7 +188,7 @@ class BooleanTest extends TestCase
     }
 
     /**
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-04
      */
     public function testWorkWithNativeType()
@@ -205,7 +205,7 @@ class BooleanTest extends TestCase
     /**
      * @param mixed $value
      * @return \Net\Bazzline\Component\DataType\Boolean
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-03
      */
     private function createNewType($value = null)

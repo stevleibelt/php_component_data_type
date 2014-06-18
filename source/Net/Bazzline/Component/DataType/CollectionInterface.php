@@ -1,6 +1,6 @@
 <?php
 /**
- * @author stev leibelt <artodeto@arcor.de>
+ * @author stev leibelt <artodeto@bazzline.net>
  * @since 2013-08-12 
  */
 
@@ -17,7 +17,7 @@ use Serializable;
  * Influenced by https://github.com/propelorm/Propel/blob/master/runtime/lib/collection/PropelCollection.php
  *
  * @package Net\Bazzline\Component\DataType
- * @author stev leibelt <artodeto@arcor.de>
+ * @author stev leibelt <artodeto@bazzline.net>
  * @since 2013-08-12
  */
 interface CollectionInterface extends ArrayAccess, Countable, Iterator, IteratorAggregate, Serializable
@@ -27,7 +27,7 @@ interface CollectionInterface extends ArrayAccess, Countable, Iterator, Iterator
      *
      * @param $element
      * @return int - number of elements in the collection
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-12
      */
     public function push($element);
@@ -37,7 +37,7 @@ interface CollectionInterface extends ArrayAccess, Countable, Iterator, Iterator
      *
      * @param $element
      * @return bool
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-12
      */
     public function contains($element);
@@ -46,7 +46,7 @@ interface CollectionInterface extends ArrayAccess, Countable, Iterator, Iterator
      * Removes all elements from the collection
      *
      * @return $this
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-12
      */
     public function clear();
@@ -57,7 +57,7 @@ interface CollectionInterface extends ArrayAccess, Countable, Iterator, Iterator
      *
      * @param CollectionInterface $collection
      * @return CollectionInterface
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-12
      */
     public function diff(CollectionInterface $collection);
@@ -67,7 +67,7 @@ interface CollectionInterface extends ArrayAccess, Countable, Iterator, Iterator
      *
      * @param $key
      * @return mixed
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-12
      */
     public function get($key);
@@ -77,7 +77,7 @@ interface CollectionInterface extends ArrayAccess, Countable, Iterator, Iterator
      *
      * @param $key
      * @return mixed
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-12
      */
     public function has($key);
@@ -86,7 +86,7 @@ interface CollectionInterface extends ArrayAccess, Countable, Iterator, Iterator
      * Validates if current element is on an even position in the collection
      *
      * @return bool
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-12
      */
     public function isEven();
@@ -95,7 +95,7 @@ interface CollectionInterface extends ArrayAccess, Countable, Iterator, Iterator
      * Validates if current element is the first element in the collection
      *
      * @return bool
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-12
      */
     public function isFirst();
@@ -104,7 +104,7 @@ interface CollectionInterface extends ArrayAccess, Countable, Iterator, Iterator
      * Validates if current element is the first element in the collection
      *
      * @return bool
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-12
      */
     public function isLast();
@@ -113,7 +113,7 @@ interface CollectionInterface extends ArrayAccess, Countable, Iterator, Iterator
      * Validates if current element is on an odd position in the collection
      *
      * @return bool
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-12
      */
     public function isOdd();
@@ -122,7 +122,7 @@ interface CollectionInterface extends ArrayAccess, Countable, Iterator, Iterator
      * Returns removed element from the end
      *
      * @return mixed
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-12
      */
     public function pop();
@@ -132,7 +132,7 @@ interface CollectionInterface extends ArrayAccess, Countable, Iterator, Iterator
      *
      * @param $element
      * @return int - number of elements in the collection
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-12
      */
     public function prepend($element);
@@ -142,7 +142,7 @@ interface CollectionInterface extends ArrayAccess, Countable, Iterator, Iterator
      *
      * @param $key
      * @return mixed
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-12
      */
     public function remove($key);
@@ -151,7 +151,7 @@ interface CollectionInterface extends ArrayAccess, Countable, Iterator, Iterator
      * Returns removed element from the beginning
      *
      * @return mixed
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-12
      */
     public function shift();

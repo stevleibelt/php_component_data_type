@@ -1,6 +1,6 @@
 <?php
 /**
- * @author stev leibelt <artodeto@arcor.de>
+ * @author stev leibelt <artodeto@bazzline.net>
  * @since 2013-08-03 
  */
 
@@ -12,14 +12,14 @@ use Net\Bazzline\Component\DataType\FloatingPoint;
  * Class FloatingPointTest
  *
  * @package Test\Net\Bazzline\Component\DataType
- * @author stev leibelt <artodeto@arcor.de>
+ * @author stev leibelt <artodeto@bazzline.net>
  * @since 2013-08-03
  */
 class FloatingPointTest extends TestCase
 {
     /**
      * @return array
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-04
      */
     public static function castTestCases()
@@ -65,7 +65,7 @@ class FloatingPointTest extends TestCase
      *
      * @param mixed $value
      * @param float $expectedCastingValue
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-04
      */
     public function testCastToType($value, $expectedCastingValue)
@@ -76,7 +76,7 @@ class FloatingPointTest extends TestCase
     }
 
     /**
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-04
      */
     public function testEqualValue()
@@ -89,7 +89,7 @@ class FloatingPointTest extends TestCase
     }
 
     /**
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-04
      */
     public function testWorkWithNativeType()
@@ -104,7 +104,7 @@ class FloatingPointTest extends TestCase
     /**
      * @param mixed $value
      * @return \Net\Bazzline\Component\DataType\FloatingPoint
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-03
      */
     private function createNewType($value = null)

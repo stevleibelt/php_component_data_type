@@ -1,6 +1,6 @@
 <?php
 /**
- * @author stev leibelt <artodeto@arcor.de>
+ * @author stev leibelt <artodeto@bazzline.net>
  * @since 2013-08-03
  */
 
@@ -11,7 +11,7 @@ namespace Net\Bazzline\Component\DataType;
  * Main part of the implementation is taken from: https://raw.github.com/stevleibelt/php_component_utility/master/source/Net/Bazzline/Component/Utility/String.php
  *
  * @package Net\Bazzline\Component\DataType
- * @author stev leibelt <artodeto@arcor.de>
+ * @author stev leibelt <artodeto@bazzline.net>
  * @since 2013-08-03
  * @todo implement ArrayAccess, Iterator
  */
@@ -19,7 +19,7 @@ class String extends DataTypeAbstract implements StringInterface
 {
     /**
      * @return int
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-03
      */
     public function length()
@@ -29,7 +29,7 @@ class String extends DataTypeAbstract implements StringInterface
 
     /**
      * @return $this
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-03
      */
     public function trim()
@@ -44,7 +44,7 @@ class String extends DataTypeAbstract implements StringInterface
      * @param string|array $replace
      * @param bool $ignoreCase
      * @return $this
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-03
      */
     public function replace($search, $replace, $ignoreCase = true)
@@ -62,7 +62,7 @@ class String extends DataTypeAbstract implements StringInterface
      * @param string $search
      * @param bool $ignoreCase
      * @return bool
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-03
      */
     public function contains($search, $ignoreCase = true)
@@ -80,7 +80,7 @@ class String extends DataTypeAbstract implements StringInterface
      * @param string $prefix
      * @param bool $ignoreCase
      * @return bool
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-03
      */
     public function startsWith($prefix, $ignoreCase = true)
@@ -98,7 +98,7 @@ class String extends DataTypeAbstract implements StringInterface
      * @param string $suffix
      * @param bool $ignoreCase
      * @return bool
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-03
      */
     public function endsWith($suffix, $ignoreCase = true)
@@ -112,7 +112,7 @@ class String extends DataTypeAbstract implements StringInterface
 
     /**
      * @return string
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-03
      */
     public function toLower()
@@ -122,7 +122,7 @@ class String extends DataTypeAbstract implements StringInterface
 
     /**
      * @return string
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-03
      */
     public function toUpper()
@@ -142,7 +142,7 @@ class String extends DataTypeAbstract implements StringInterface
     /**
      * @param $string
      * @throws InvalidArgumentException
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-04
      */
     private function throwInvalidArgumentExceptionIfValueIsEmptyString($string)

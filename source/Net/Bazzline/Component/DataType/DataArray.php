@@ -1,6 +1,6 @@
 <?php
 /**
- * @author stev leibelt <artodeto@arcor.de>
+ * @author stev leibelt <artodeto@bazzline.net>
  * @since 2013-08-04
  */
 
@@ -10,7 +10,7 @@ namespace Net\Bazzline\Component\DataType;
  * Class DataArray
  *
  * @package Net\Bazzline\Component\DataType
- * @author stev leibelt <artodeto@arcor.de>
+ * @author stev leibelt <artodeto@bazzline.net>
  * @since 2013-08-04
  */
 class DataArray extends DataTypeAbstract implements DataArrayInterface
@@ -18,7 +18,7 @@ class DataArray extends DataTypeAbstract implements DataArrayInterface
     /**
      * @param array $array
      * @return $this
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-07
      */
     public function fromArray(array $array)
@@ -30,7 +30,7 @@ class DataArray extends DataTypeAbstract implements DataArrayInterface
 
     /**
      * @return array
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-07
      */
     public function toArray()
@@ -43,7 +43,7 @@ class DataArray extends DataTypeAbstract implements DataArrayInterface
      *
      * @param array $value
      * @return $this
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-04
      */
     public function setValue($value)
@@ -216,7 +216,7 @@ class DataArray extends DataTypeAbstract implements DataArrayInterface
      * @param DataArrayInterface $dataArray
      * @param bool $overwrite
      * @return $this
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-31
      */
     public function merge(DataArrayInterface $dataArray, $overwrite = true)
@@ -254,7 +254,7 @@ class DataArray extends DataTypeAbstract implements DataArrayInterface
     /**
      * @param mixed $value
      * @return array
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-08-07
      */
     protected function castToType($value)
